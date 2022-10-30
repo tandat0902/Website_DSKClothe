@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Register";
+}
+
+@model DSK_Clothes.Models.User
+
+<main class="main">
+    <div class="form-su">
+        <div class="header_form">TẠO TÀI KHOẢN</div>
+        <div class="info_alert">
+            @if (TempData["MessageSuccess"] != null)
+            {
+                <div class="alert alert-success fade show" role="alert">
+                    <strong>Thông báo: </strong> @TempData["MessageSuccess"] bấm @Html.ActionLink("vào đây", "LogIn", "SignUp") để chuyển sang trang Login!
+                </div>
+            }
+            @if (TempData["MessageError"] != null)
+            {
+                <div class="alert alert-danger fade show" role="alert">
+                    <strong>Thông báo: </strong> @TempData["MessageError"]
+                </div>
+            }
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <form>
+                <div class="body_form">
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.FullName, new { @type = "text", @class = "rs-form form__inp", @placeholder = "Họ và tên" })
+                        @Html.ValidationMessageFor(p => p.FullName, "", new { @class = "text-danger" })
+                        <p class="help-block">Nhập họ tên đầy đủ, Capital từng từ!</p>
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.Email, new { @type = "email", @class = "rs-form form__inp", @placeholder = "Email" })
+                        @Html.ValidationMessageFor(p => p.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.Tel, new { @type = "tel", @class = "rs-form form__inp", @placeholder = "Số điện thoại" })
+                        @Html.ValidationMessageFor(p => p.Tel, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.BirthDay, new { @type = "date", @class = "rs-form form__inp", @placeholder = "Ngày sinh" })
+                        @Html.ValidationMessageFor(p => p.BirthDay, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.Password, new { @type = "password", @class = "rs-form form__inp", @placeholder = "Mật khẩu" })
+                        @Html.ValidationMessageFor(p => p.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.ConfirmPassword, new { @type = "password", @class = "rs-form form__inp", @placeholder = "Xác nhận mật khẩu" })
+                        @Html.ValidationMessageFor(p => p.ConfirmPassword, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="box">
+                        <div class="item">
+                            <div class="checkbox-rect2">
+                                <input type="checkbox" id="chkbox" name="check" onclick="unlock_btn()">
+                                <label for="chkbox">Tôi đồng ý với các điều khoản và điều kiện, chính sách bảo mật và chính sách cookie</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-cre mr-b">
+                        <button type="submit" id="btn-create" class="btn-dark btn-nor" disabled>Tạo</button>
+                    </div>
+                    <div class="footer_form">
+                        <p>Nếu sdt hoặc email của bạn báo đã tồn tại, bấm @Html.ActionLink("vào đây", "LogIn", "SignUp") và login với sdt hoặc email đó với một mật khẩu bất kì để kích hoạt tài khoản hoặc liên hệ với bộ phận cskh của DSK CLOTHES để được hỗ trợ</p>
+                    </div>
+                </div>
+            </form>
+        }
+    </div>    
+</main>

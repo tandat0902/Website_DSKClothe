@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "LogIn";    
+}
+@model DSK_Clothes.Models.User
+
+<main class="main">
+    <div class="form-su">
+        <div class="header_form">ĐĂNG NHẬP</div>
+        <div class="info_alert">
+            @if (TempData["MessageError"] != null)
+            {
+                <div class="alert alert-danger fade show" role="alert">
+                    <strong>Thông báo: </strong> @TempData["MessageError"]
+                </div>
+            }
+        </div>
+        <div class="su-link">
+            "Bạn chưa có tài khoản?"
+            @Html.ActionLink("Đăng ký", "SignUp", "SignUp", new { @class="form__link"})
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <form>
+                <div class="body_form">
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.Tel, new { @type = "tel", @class = "rs-form form__inp", @placeholder = "Số điện thoại" })
+                        @Html.ValidationMessageFor(p => p.Tel, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.Password, new { @type = "password", @class = "rs-form form__inp", @placeholder = "Mật khẩu" })
+                        @Html.ValidationMessageFor(p => p.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="box">
+                        <div class="item">
+                            <div class="checkbox-rect2">
+                                <input type="checkbox" id="checkbox-rect2" name="check">
+                                <label for="checkbox-rect2">Ghi nhớ tài khoản</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-cre fl-wrap mr-b">
+                        <div class="fg-ps">
+                            <a href="#">Quên mật khẩu</a>
+                        </div>
+                        <div class="submit__btn">
+                            <button type="submit" class="btn-dark">Đăng nhập</button>
+                        </div>
+                    </div>
+                    <p class="text-danger danger-mb">@ViewBag.Message</p>  
+                </div>
+            </form>
+        }
+    </div>
+</main>
+

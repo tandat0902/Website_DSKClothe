@@ -1,0 +1,138 @@
+﻿
+<header class="hd hdJS up">
+    <div class="header-banner" id="hd-banner">
+        <div class="header-banner-message">
+            <i class="fa fa-globe"></i>
+            <span>DSK Clothes love you!!!</span>
+        </div>
+        <div class="header-banner-switch">
+            <div class="menu-dropdown">
+                <a href="#" class="button-dropdown">
+                    <span>BUY NOW</span>
+                    <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hd__top">
+        <div class="con fl-ct">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="hd__logo">
+                    <a href="~/Home/Home"><img src="/Images/logo.gif" alt="Home - DSK Clothes" /></a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="hd__list fl-con aln-ct">
+                    <div class="hd__notification pd-lr hv-ani">
+                        <div class="notification__btn dp-block ">
+                            <div class="notification__btn__child">
+                                <i class="far fa-bell"></i>
+                                <div class="cart__num c-whi f-thin">
+                                    1
+                                </div>
+                            </div>
+                            <div class=""></div>
+                        </div>
+                    </div>
+                    <div class="hd__ser pd-lr hd__des hv-ani">
+                        <div class="ser__btn actBtn">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="hd__cart pd-lr hv-ani">
+                        <div class="cart__btn cartBtn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <div class="cart__num c-whi f-thin">
+                                0
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hd__user pd-lr">
+                        <a href="~/SignUp/LogIn" class="user__btn actBtn">
+                            <i class="fas fa-user-circle"></i>
+                        </a>               
+                    </div>
+                    <div class="hd__lang pd-lr">
+                        <div class="lang actPanel">
+                            <div class="lang__btn actBtn fl-ct">
+                                <img src="/Images/vn.png" alt="Region: VIETNAM" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hd__bot" id="hd-bot-sc">
+        <div class="con pd-0">
+            <div class="hd__menu menu menuBoard">
+                <div class="menu__wrap">
+                    <ul id="menu-main-menu">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-890" id="menu-item-890">
+                            @*<a href="#">Về chúng tôi
+                                <img src="/Images/circle.png" class="cirle-chs menu-df menu1" alt="Alternate Text" />
+                            </a>*@
+                            @Html.ActionLink("Về chúng tôi", "AboutUs", "Home")   
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307" id="menu-item-307"> 
+                            @Html.ActionLink("Shop", "Shop", "Home")
+                            <span><i class="fas fa-angle-down"></i></span>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a href="#">Tất cả</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#">New Arrival</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#">T - shirt</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#">Polo</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#">Outerwear</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#">Quần</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#">Ba lô</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#">Phụ kiện</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#">BST</a>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                        <li class="red menu-item menu-item-type-post_type menu-item-object-page menu-item-622385" id="menu-item-622385">
+                            @Html.ActionLink("Sale-off", "SaleOff", "Home") 
+                        </li>  
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305" id="menu-item-305">
+                            @Html.ActionLink("Bộ sưu tập", "Collection", "Home") 
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304" id="menu-item-304">
+                            @Html.ActionLink("Outfits", "Outfits", "Home")
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4398" id="menu-item-4398">
+                            @Html.ActionLink("Blog", "Blog", "Home")
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171" id="menu-item-171">
+                            @Html.ActionLink("Liên hệ", "Contact", "Home")
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-172" id="menu-item-172">
+                            @Html.ActionLink("Chăm sóc khách hàng", "Care", "Home")
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-639205" id="menu-item-639205">
+                            @Html.ActionLink("Blog", "Blog", "Home")
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

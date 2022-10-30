@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+@model IEnumerable<DSK_Clothes.Models.Product>
+
+<main class="main">
+    <div class="ban">
+        <div class="wrap-video ban__img">
+            <div class="home-video-desktop rto-box">
+                <video id="video_background" preload="auto" autoplay loop muted>
+                    <source src="https://levents.asia/wp-content/uploads/2022/09/TRANG-TIEN-1.0.mp4" type="video/mp4" />
+                </video>
+            </div>           
+            <div class="home-video-mobile rto-box"></div>
+        </div>
+    </div>
+    <section class="sec-60 pd-0 abs">
+        <div class="con">
+            <h2 class="sec-title">
+                NEW COLLECTION
+            </h2>
+            <div class="pd__list fl-wrap">
+                @foreach (var item in Model)
+                {
+                    <div class="col-3">
+                        <div class="pd__item aos-init aos-animate">
+                            <div class="pd__top coJS ">
+                                <a href="#">
+                                    <div class="rto-box">
+                                        <img width="300" height="300" src="@Html.DisplayFor(modelItem => item.Hinh)" alt="Alternate Text" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="pd__bot">
+                                <a href="#" title="DSK CLOTHES® | Coachella Heavy Tee" class="pd__title">DSK CLOTHES® | @Html.DisplayFor(modelItem => item.TenSP)</a>
+                                <div class="pd__price">
+                                    <span class="big m-black">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                @Html.DisplayFor(modelItem => item.Gia)
+                                                <span class="woocommerce-Price-currencySymbol">vnđ</span>
+                                            </bdi>
+                                        </span>
+                                    </span>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                }
+                <a href="#" class="btn-sec hov-df pd__btn mg-ct">XEM THÊM</a>
+
+            </div>
+        </div>
+    </section>
+</main>

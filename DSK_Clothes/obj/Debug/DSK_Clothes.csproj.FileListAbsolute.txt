@@ -1,0 +1,64 @@
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\DSK_Clothes.dll.config
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\DSK_Clothes.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\DSK_Clothes.pdb
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\Antlr3.Runtime.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\EntityFramework.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\Microsoft.Web.Infrastructure.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\Newtonsoft.Json.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Net.Http.Formatting.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Http.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Http.WebHost.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Mvc.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Optimization.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Providers.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Razor.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.Deployment.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.Razor.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\WebGrease.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\EntityFramework.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\Newtonsoft.Json.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Net.Http.Formatting.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Http.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Http.WebHost.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Mvc.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.Razor.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.Deployment.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.Razor.xml
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\obj\Debug\DSK_Clothes.csprojResolveAssemblyReference.cache
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\obj\Debug\DSK_Clothes.dll
+D:\programming-language\web\ltw\DSK_Clothes\DSK_Clothes\obj\Debug\DSK_Clothes.pdb
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\DSK_Clothes.dll.config
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\DSK_Clothes.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\DSK_Clothes.pdb
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\Antlr3.Runtime.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\EntityFramework.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\Newtonsoft.Json.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Http.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Mvc.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Optimization.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Providers.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Razor.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\WebGrease.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\EntityFramework.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\Newtonsoft.Json.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Http.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Mvc.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.Razor.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\obj\Debug\DSK_Clothes.csprojResolveAssemblyReference.cache
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\obj\Debug\DSK_Clothes.dll
+C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\obj\Debug\DSK_Clothes.pdb
