@@ -62,3 +62,35 @@ C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3
 C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\obj\Debug\DSK_Clothes.csprojResolveAssemblyReference.cache
 C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\obj\Debug\DSK_Clothes.dll
 C:\Users\Admin\OneDrive - Ho Chi Minh city University of Food Industry\HUFI\Nam3\Ki1\lap_trinh_web\do_an_cuoi_ky\DSK_Clothes\DSK_Clothes\obj\Debug\DSK_Clothes.pdb
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\DSK_Clothes.dll.config
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\DSK_Clothes.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\DSK_Clothes.pdb
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Providers.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\WebGrease.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\obj\Debug\DSK_Clothes.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\obj\Debug\DSK_Clothes.dll
+C:\Users\Admin\Desktop\Website_DSKClothe\DSK_Clothes\obj\Debug\DSK_Clothes.pdb

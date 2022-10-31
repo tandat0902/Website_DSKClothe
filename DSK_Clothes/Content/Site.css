@@ -60,7 +60,7 @@ textarea {
     display: none;
 }
 
-/*-------------------------------------------------------- STYLE HEADER --------------------------------------------------------*/
+/*-------------------------------------------------------- STYLE BASE --------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
@@ -74,6 +74,8 @@ body{
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto Mono', monospace;
     overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
 }
 
 ::-webkit-scrollbar{
@@ -84,6 +86,11 @@ body{
 ::-webkit-scrollbar-thumb{
     background: #232323;
 }
+
+/*-------------------------------------------------------- STYLE LOADING --------------------------------------------------------*/
+
+
+/*-------------------------------------------------------- STYLE HEADER --------------------------------------------------------*/
 
 .hd{
     position:fixed;
@@ -470,6 +477,7 @@ body{
     margin-top: auto;
     width: 100%;
     background: white;
+    border-top: 2px solid #D4D4D4;
 }
 
 .ft__top{
@@ -575,7 +583,7 @@ body{
 
 .ban{
     position:relative;
-    margin-bottom: 65rem;
+    margin-bottom: 221rem;
 }
 
 .abs{
@@ -588,6 +596,11 @@ body{
 .sec-60{
     padding: 6rem 0;
 }
+
+.sec-t10{
+    padding-top: 10rem;
+}
+
 
 .sec-title{
     font-size: 1.3rem;
@@ -688,6 +701,58 @@ body{
   -webkit-transform: scale(2) rotate(180deg);
   transform: scale(2) rotate(180deg);
   background-color: #7f7f7f;
+}
+
+.sty{
+    overflow: hidden;
+    width: 100%;
+}
+
+.abs-of{
+    position: absolute;
+    top: 180%;
+    left: 0;
+    background: white;
+}
+
+.jus-ct{
+    justify-content: center;
+}
+
+.fl-con{
+    display: flex;
+    padding: 0;
+    flex-wrap:wrap;
+}
+
+.sty__con{
+    position: relative;
+}
+
+.sty__con .col{
+    width: 50%;
+    max-width: 75rem;
+    padding: 0 6rem;
+    position: relative;
+}
+
+
+.sty__content{
+    position: absolute;
+    bottom: 7%;
+    left: 30%;
+}
+
+.btn-sty{
+    background: #fff;
+    display: block;
+    max-width: 80%;
+    border: 1px solid #d9d9d9;
+    font-size: 1rem;
+    position: relative;
+    text-align: center;
+    line-height: 1.5rem;
+    z-index: 1;
 }
 
 
