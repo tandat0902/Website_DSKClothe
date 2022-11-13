@@ -19,7 +19,7 @@
             <div class="col-4"></div>
             <div class="col-4">
                 <div class="hd__logo">
-                    <a href="~/Home/Home"><img src="/Images/logo.gif" alt="Home - DSK Clothes" /></a>
+                    <a href="~/Home/Home"><img src="/Images/logo.gif" alt="DSK Clothes" title="DSK Clothes" /></a>
                 </div>
             </div>
             <div class="col-4">
@@ -27,8 +27,8 @@
                     <div class="hd__notification pd-lr hv-ani">
                         <div class="notification__btn dp-block ">
                             <div class="notification__btn__child">
-                                <i class="far fa-bell"></i>
-                                <div class="cart__num c-whi f-thin">
+                                <i class="far fa-bell" title="Thông báo"></i>
+                                <div class="cart__num c-whi f-thin" title="Thông báo">
                                     1
                                 </div>
                             </div>
@@ -37,25 +37,25 @@
                     </div>
                     <div class="hd__ser pd-lr hd__des hv-ani">
                         <div class="ser__btn actBtn">
-                            <i class="fas fa-search"></i>
+                            <i class="fas fa-search" title="Tìm kiếm"></i>
                         </div>
                     </div>
                     <div class="hd__cart pd-lr hv-ani">
                         <div class="cart__btn cartBtn">
-                            <i class="fas fa-shopping-bag"></i>
-                            <div class="cart__num c-whi f-thin">
+                            <i class="fas fa-shopping-bag" title="Giỏ hàng"></i>
+                            <div class="cart__num c-whi f-thin" title="Giỏ hàng">
                                 0
                             </div>
                         </div>
                     </div>
                     <div class="hd__user pd-lr">
                         <a href="~/SignUp/LogIn" class="user__btn actBtn">
-                            <i class="fas fa-user-circle"></i>
+                            <i class="fas fa-user-circle" title="Đăng nhập"></i>
                         </a>               
                     </div>
                     <div class="hd__lang pd-lr">
                         <div class="lang actPanel">
-                            <div class="lang__btn actBtn fl-ct">
+                            <div class="lang__btn actBtn fl-ct" title="Ngôn ngữ">
                                 <img src="/Images/vn.png" alt="Region: VIETNAM" />
                             </div>
                         </div>
@@ -70,9 +70,6 @@
                 <div class="menu__wrap">
                     <ul id="menu-main-menu">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-890" id="menu-item-890">
-                            @*<a href="#">Về chúng tôi
-                                <img src="/Images/circle.png" class="cirle-chs menu-df menu1" alt="Alternate Text" />
-                            </a>*@
                             @Html.ActionLink("Về chúng tôi", "AboutUs", "Home")   
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307" id="menu-item-307"> 

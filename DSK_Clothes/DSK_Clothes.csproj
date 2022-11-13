@@ -4010,6 +4010,7 @@
     <Content Include="Images\img-home\back_6.jpg" />
     <Content Include="Images\img-home\coachella-beaty-fleece-pants.png" />
     <Content Include="Images\img-home\coachella-beaty-tee.png" />
+    <Content Include="Images\img-home\coahcella-beaty-tee-2.jpg" />
     <Content Include="Images\img-home\font_1.jpg" />
     <Content Include="Images\img-home\font_2.jpg" />
     <Content Include="Images\img-home\font_3.jpg" />
@@ -4057,6 +4058,8 @@
     <Content Include="Views\Shared\FooterNavBar.cshtml" />
     <Content Include="Views\SignUp\SignUp.cshtml" />
     <Content Include="Views\SignUp\LogIn.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

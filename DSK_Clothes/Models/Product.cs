@@ -12,6 +12,6 @@ namespace DSK_Clothes.Models
         public string NuocSX { get; set; }
         public string ChatLieu { get; set; }
         public string Hinh { get; set; }
-        public decimal Gia { get; set; }
+        public string Gia { get; set; }
     }
 }

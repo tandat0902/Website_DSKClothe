@@ -31,6 +31,7 @@ namespace DSK_Clothes.ConnectionDatabase
 
                 foreach (DataRow row in dt.Rows)
                 {
+                    string gia = String.Format("{0:0,0}", (decimal)row["GIA"]);
                     listProduct.Add(new Product
                     {
                         MaSP = (int)row["MaSP"],
@@ -38,7 +39,41 @@ namespace DSK_Clothes.ConnectionDatabase
                         NuocSX = row["NUOCSX"].ToString(),
                         ChatLieu = row["CHATLIEU"].ToString(),
                         Hinh = row["HINH"].ToString(),
-                        Gia = (decimal)row["GIA"]
+                        Gia = gia
+                    });
+                }
+                return listProduct;
+            }
+        }
+
+        //------------------------------------------------- LẤY SẢN PHẨM BẰNG MÃ SẢN PHẨM
+        public List<Product> getProductByID(int MASP)
+        {
+            List<Product> listProduct = new List<Product>();
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM SANPHAM WHERE MASP = '" + MASP + "'";
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+
+                con.Open();
+                da.Fill(dt);
+                con.Close();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    string gia = String.Format("{0:0,0}", (decimal)row["GIA"]);
+                    listProduct.Add(new Product
+                    {
+                        MaSP = (int)row["MaSP"],
+                        TenSP = row["TENSP"].ToString(),
+                        NuocSX = row["NUOCSX"].ToString(),
+                        ChatLieu = row["CHATLIEU"].ToString(),
+                        Hinh = row["HINH"].ToString(),
+                        Gia = gia
                     });
                 }
                 return listProduct;

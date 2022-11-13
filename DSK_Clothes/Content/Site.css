@@ -78,6 +78,11 @@ body{
     height: 100%;
 }
 
+::selection{
+    background-color: #242424;
+    color: #fff;
+}
+
 ::-webkit-scrollbar{
     width: 7px;
     background: #808080;
@@ -177,56 +182,6 @@ body{
     color: red;
 }
 
-/*.cirle-chs {
-    position: absolute;
-    width: 50px;
-    top: 0;
-    color: orange;
-    display: none;
-    margin-top: 12px;
-    transition: all .4s ease-in-out;
-}*/
-
-/*.menu1{
-    left: 10px;
-}
-
-.menu2{
-    left: -13px;
-}
-
-.menu3{
-    left: -5px;
-}
-
-.menu4{
-    left: 0;
-}
-
-.menu5{
-    left: -10px;
-}
-
-.menu6{
-    left: -20px;
-}
-
-.menu7{
-    left: -5px;
-}
-
-.menu8{
-    left: 40px;
-}
-
-.menu9{
-    left: 0;
-}
-
-.menu-item a:hover .cirle-chs{
-    display: block;
-}*/
-
 .menu-item i{
     font-size: 10px;
     color: #47474C;
@@ -257,7 +212,7 @@ body{
 
 .hd__logo img{
     width: 250px;
-    margin-top: 7px;
+    margin-top: -5px;
     margin-left: 90px
 }
 
@@ -721,7 +676,7 @@ body{
 
 .fl-con{
     display: flex;
-    padding: 0;
+    padding: 0.5rem;
     flex-wrap:wrap;
 }
 
@@ -874,9 +829,6 @@ body{
     color:white;
 }
 
-/*.btn-cre button:hover{
-    background-color:black;
-}*/
 
 .unlock-btn:hover{
     background-color: black;
@@ -915,4 +867,301 @@ body{
 .danger-mb{
     text-align: justify;
     margin-bottom:3rem;
+}
+
+/*-------------------------------------------------------- STYLE DETAILS --------------------------------------------------------*/
+.bc{
+    margin-top: 19rem;
+    margin-bottom:2rem;
+    font-size: 13px;
+    padding: 0 2.5rem;
+}
+
+.nav a{
+    padding: 0 0.5rem;
+    color: #47474C;
+    transition: all 0.2s ease-in;
+}
+
+.nav a:hover{
+    color: #47474C;
+    transform: scale(1.1);
+    font-weight: 600;
+}
+
+.nav span{
+    padding: 0 0.5rem;
+    color: #47474C;
+    font-weight: 600;
+}
+
+.sec-30{
+    padding: 3rem 0;
+}
+
+.mona-wrap-shop{
+    max-width: 90%;
+}
+
+.shop-dt{
+    border-bottom: 1px solid #D4D4D4;
+}
+
+.detail-pr{
+    margin-bottom: 2rem;
+}
+
+.name__pr{
+    font-weight: 600;
+}
+
+.detail-pr{
+    width: 100%;
+    height: 10%;
+}
+
+.txt-detail{
+    font-size: 15px;
+}
+
+.img__pr button{
+    width: 12%;
+    margin-right: 1rem;
+    border: 1px solid #47474C;
+    transition: transform .2s ease-in-out;
+}
+
+.img__pr img{
+    width: 100%;
+}
+
+.img__pr button:hover{
+    transform: scale(1.1);
+}
+
+.form-select{
+    width: 50%;
+}
+
+.form-select:focus{
+    border: 1px solid #ced4da;
+    box-shadow: none;
+}
+
+.mg-t-txt{
+    margin-top: 0.75rem;
+}
+
+.product__describe-custom{
+    margin-left: 1rem;
+    display: flex;
+    opacity:1;
+    display:inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+}
+
+.product__describe-custom-reduced{
+    height: 2rem;
+    width: 2rem;
+    background-color: #F5F5F5;
+    color: #808080;
+    border: 2px solid #E1E1E1;
+    font-size: 20px;
+    overflow:hidden;
+    position:relative;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #ddd;
+    cursor: pointer;
+}
+
+.product__describe-custom-input{
+    height: 2rem;
+    width: 4rem;
+    background-color: transparent;
+    color: #808080;
+    font-size: 20px;
+    text-align: center;
+    vertical-align:top;
+    margin:0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    border-left:0;
+    border-right:0;
+    padding:0;
+}
+
+.product__describe-custom-input::-webkit-outer-spin-button, .product__describe-custom-input::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin:0;
+}
+
+.product__describe-custom-increase{
+    height: 2rem;
+    width: 2rem;
+    background-color: #F5F5F5;
+    color: #808080;
+    border: 2px solid #E1E1E1;
+    font-size: 20px;
+    overflow:hidden;
+    position:relative;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #ddd;
+    cursor: pointer;
+}
+
+.btn-buy-sty{
+    width: 15rem;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.btn-buy{
+    background: #47474C;
+    display: block;
+    max-width: 100%;
+    border: 1px solid #47474C;
+    font-size: 1rem;
+    position: relative;
+    text-align: center;
+    line-height: 1.5rem;
+    z-index: 1;
+}
+
+.mg-buy{
+    margin: 1rem 0;
+}
+
+.hov-buy{
+    transition: all .5s linear;
+    overflow: hidden;
+}
+
+.hov-buy:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #47474C;
+  transition: all 0.5s ease;
+}
+.hov-buy:hover {
+  background: #000;
+  color: #fff;
+}
+.hov-buy:hover:after {
+  -webkit-transform: scale(2);
+  transform: scale(2) rotate(180deg);
+  background-color: #000;
+}
+
+.product__imgs.page-buy{
+    display: flex;
+}
+
+.product__imgs ul li{
+    list-style: none;
+}
+
+.product__imgs ul li img {
+    width: 5rem;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.7;
+    border: 1px solid #47474C;
+    margin-bottom: 1rem;
+}
+
+.product__imgs ul li img:hover{
+    border: 1px dashed #47474C;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.product__imgs #main-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.product__imgs #main-img img{
+    width: 75%;
+    transform: scale(1.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.shop-dt__title{
+    padding: 3rem 0;
+    margin-bottom: 1rem;
+}
+
+.shopOp {
+    cursor: pointer;
+}
+
+.mg-r-auto{
+    margin-right: auto;
+}
+
+.txt-title{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.shop-dt__open img{
+    width: 1rem;
+}
+
+.shop-dt__hid {
+    height: 0;
+    overflow: hidden;
+    margin-top: -3.5rem;
+    transition: 0.5s linear;
+    opacity: 0;
+}
+
+.shop-dt__hid.active {
+    margin-top: 0;
+    height: auto;
+    opacity: 1;
+}
+
+.mona-content{
+    font-size: 14px;
+}
+
+.mona-content a{
+    color: #a20000;
+    text-decoration: none;
+}
+
+.back-home{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.back-home a{
+    color: #47474C;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-home a:hover{
+    color: #232323;
+    font-weight: 600;
 }

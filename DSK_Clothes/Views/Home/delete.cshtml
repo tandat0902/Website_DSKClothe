@@ -1,0 +1,57 @@
+﻿@model DSK_Clothes.Models.Product
+
+@{
+    ViewBag.Title = "delete";
+}
+
+<h2>delete</h2>
+
+<fieldset>
+    <legend>Product</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MaSP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaSP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TenSP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TenSP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NuocSX)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NuocSX)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ChatLieu)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ChatLieu)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Hinh)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Hinh)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gia)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,157 @@
+﻿
+
+@model IEnumerable<DSK_Clothes.Models.Product>
+
+@foreach (var item in Model)
+{
+    ViewBag.Title = "DSK CLOTHES® " + @Html.DisplayFor(p => item.TenSP);
+}
+
+<main class="main">
+    <div class="bc">
+        <div class="con">
+            <nav class="nav">
+                @Html.ActionLink("Trang chủ", "Home", "Home", new { @class = "nav-link" })  /
+                @Html.ActionLink("Shop", "Home", "Home", new { @class = "nav-link" })   /
+                @foreach (var item in Model)
+                {
+                    <span>DSK CLOTHES® @Html.DisplayFor(p => item.TenSP)</span>
+                }
+            </nav>
+            <div class="sec-30">
+                <div class="con fl-wrap mona-wrap-shop">
+                    <div class="col-7">
+                        @foreach (var item in Model)
+                        {
+                            <div class="product__imgs page-buy">
+                                <ul class="product__imgs-pc">
+                                    <li><img src="@Html.DisplayFor(p => item.Hinh)" alt="" onclick="changeImage('one')" id="one"></li>
+                                </ul>
+                                <div id="main-img">
+                           
+                                        <img src="@Html.DisplayFor(p => item.Hinh)" alt="" id="img-main">
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="col-5">
+                        <div class="shop-dt">
+                            @foreach (var item in Model)
+                            {
+                                <div class="list-group-item">
+                                    @using (Html.BeginForm())
+                                    {
+                                        <form class="was-validated">
+                                            <div class="detail-pr">
+                                                <h5 class="name__pr">DSK CLOTHES® @Html.DisplayFor(p => item.TenSP, new { @class = "form-control" })</h5>
+                                            </div>
+                                            <div class="detail-pr price__pr">
+                                                <h4>@Html.DisplayFor(p => item.Gia) <span>vnđ</span></h4>
+                                            </div>
+                                            <div class="detail-pr">
+                                                <p class="txt-detail">Màu sắc:</p>
+                                                <div class="fl-wrap img__pr">
+                                                    <button><img src="@Html.DisplayFor(p => item.Hinh, new { @class = "form-control" })" alt="Alternate Text" /></button>
+                                                </div>
+                                            </div>
+                                            <div class="detail-pr">
+                                                <p class="txt-detail">Size:</p>
+                                                <select class="form-select">
+                                                    <option selected>Chọn Size</option>
+                                                    <option value="S">S</option>
+                                                    <option value="M">M</option>
+                                                    <option value="L">L</option>
+                                                    <option value="XL">XL</option>
+                                                </select>
+                                            </div>
+                                            <div class="detail-pr fl-wrap">
+                                                <p class="txt-detail mg-t-txt">Số lượng:</p>
+                                                <div class="product__describe-custom">
+                                                    <!-- <button class="reduced is-form" type="button" onclick="reducedItems()">-</button> -->
+                                                    <input class="product__describe-custom-reduced is-form" type="button" value="-">
+                                                    <input aria-label="quantity" class="product__describe-custom-input" max="100" min="1" name="" type="number" value="1">
+                                                    <input class="product__describe-custom-increase is-form" type="button" value="+">
+                                                    <!-- <button class="increase is-form" type="button" onclick="reducedItems()">+</button> -->
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn-buy hov-buy btn-buy-sty mg-buy" title="Thêm vào giỏ hàng">Thêm vào giỏ</button>
+                                        </form>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <div class="shop-dt">
+                            <div class="fl-ct shop-dt__title shopOp" onclick="showHide1()">
+                                <div class="mg-r-auto txt-title">Thông tin</div>
+                                <div class="shop-dt__open fl-ct ">
+                                    <img src="https://levents.asia/template/assets/images/svg/ic-arr.svg" alt="Alternate Text" />
+                                </div>
+                            </div>
+                            <div class="shop-dt__hid shopHid" id="show-hide1">
+                                <div class="mona-content shop-dt__txt">
+                                    @foreach (var item in Model)
+                                    { 
+                                        <p>DSK CLOTHES® @Html.DisplayFor(p => item.TenSP)</p>
+                                        <p>Chất liệu: @Html.DisplayFor(p => item.ChatLieu)</p>
+                                        <p>Nước sản xuất: @Html.DisplayFor(p => item.NuocSX)</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop-dt">
+                            <div class="fl-ct shop-dt__title shopOp" onclick="showHide2()">
+                                <div class="mg-r-auto txt-title">Bảng size</div>
+                                <div class="shop-dt__open fl-ct ">
+                                    <img src="https://levents.asia/template/assets/images/svg/ic-arr.svg" alt="Alternate Text" />
+                                </div>
+                            </div>
+                            <div class="shop-dt__hid shopHid" id="show-hide2">
+                                <div class="mona-content shop-dt__txt">
+                                    <p>Form áo được Fit size theo form và tiêu chuẩn tương đối của người Việt Nam, nếu bạn đang cân nhắc giữa hai size, nên chọn size lớn hơn.</p>
+                                    <p>
+                                        Size S(1): Chiều cao từ 1m50 – 1m65, cân nặng trên 55kg <br />
+                                        Size M(2): Chiều cao từ 1m65 – 1m72, cân nặng dưới 65kg <br />
+                                        Size L(3): Chiều cao từ 1m70 – 1m77, cân nặng dưới 80kg <br />
+                                        Size XL(4): Chiều cao trên 1m72, cân nặng dưới 95kg <br />
+                                    </p>
+                                    <img src="https://levents.asia/wp-content/uploads/2022/11/Website-Boxy-Tee-100.jpg" alt="Alternate Text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop-dt">
+                            <div class="fl-ct shop-dt__title shopOp" onclick="showHide3()">
+                                <div class="mg-r-auto txt-title">Quy định đổi trả</div>
+                                <div class="shop-dt__open fl-ct ">
+                                    <img src="https://levents.asia/template/assets/images/svg/ic-arr.svg" alt="Alternate Text" />
+                                </div>
+                            </div>
+                            <div class="shop-dt__hid shopHid" id="show-hide3">
+                                <div class="mona-content shop-dt__txt">
+                                    <p>Nhằm mang lại cho bạn sự tiện lợi và những trải nghiệm tuyệt vời khi mua hàng, tụi mình đã phát triển dịch vụ đổi hàng tận nơi và chính sách bảo hành.</p>
+                                    <p>
+                                        Tham khảo thêm thông tin về chính sách <span><a href="#">tại đây</a></span>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back-home">
+                <a href="~/Home/Home">
+                    <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                        <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
+                    </svg>
+                    Return to Clothing</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>  
+
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>

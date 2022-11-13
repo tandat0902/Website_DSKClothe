@@ -25,6 +25,18 @@ namespace DSK_Clothes.Controllers
             }
             return View(listProduct);
         }
+
+        public ActionResult Details(int id)
+        {
+            var listProduct = cnp.getProductByID(id);
+            if (listProduct.Count == 0)
+            {
+                TempData["MessageError"] = "Kho hàng không có sản phẩm nào cả!";
+            }
+            return View(listProduct);
+        }
+
+
         public ActionResult Error()
         {
             return View();

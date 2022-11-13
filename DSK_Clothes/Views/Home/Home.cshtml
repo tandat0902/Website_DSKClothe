@@ -26,16 +26,14 @@
                 @foreach (var item in Model)
                 {
                     <div class="col-3">
-                        <div class="pd__item aos-init aos-animate">
+                        <div class="pd__item aos-init aos-animate" title="DSK CLOTHES® | @Html.DisplayFor(modelItem => item.TenSP)">
                             <div class="pd__top coJS ">
-                                <a href="#">
-                                    <div class="rto-box">
-                                        <img width="300" height="300" src="@Html.DisplayFor(modelItem => item.Hinh)" alt="Alternate Text" />
-                                    </div>
-                                </a>
+                                <div class="rto-box">
+                                    <img width="300" height="300" src="@Html.DisplayFor(modelItem => item.Hinh)" alt="Alternate Text" />
+                                </div>
                             </div>
                             <div class="pd__bot">
-                                <a href="#" title="DSK CLOTHES® | Coachella Heavy Tee" class="pd__title">DSK CLOTHES® | @Html.DisplayFor(modelItem => item.TenSP)</a>
+                                @Html.ActionLink("DSK CLOTHES® | " + @Html.DisplayFor(modelItem => item.TenSP), "Details", new { id = item.MaSP }, new { @class = "pd__title" })
                                 <div class="pd__price">
                                     <span class="big m-black">
                                         <span class="woocommerce-Price-amount amount">
@@ -46,11 +44,11 @@
                                         </span>
                                     </span>
                                 </div>
-                             </div>
+                            </div>
                         </div>
                     </div>
                 }
-                <a href="#" class="btn-sec hov-df pd__btn mg-ct">XEM THÊM</a>
+                <a href="#" class="btn-sec hov-df pd__btn mg-ct" title="Xem thêm">XEM THÊM</a>
             </div>
         </div>
     </section>
