@@ -575,11 +575,11 @@ body{
 
 .rto-box img{
     object-fit:cover;
-    margin: 0 25px;
+    margin: 0 10%;
 }
 
 .pd__bot{
-    margin: 0 3.125rem;
+    margin: 0 10%;
     text-align:center;
 }
 
@@ -665,7 +665,7 @@ body{
 
 .abs-of{
     position: absolute;
-    top: 180%;
+    top: 115rem;
     left: 0;
     background: white;
 }
@@ -695,7 +695,7 @@ body{
 .sty__content{
     position: absolute;
     bottom: 7%;
-    left: 30%;
+    left: 35%;
 }
 
 .btn-sty{

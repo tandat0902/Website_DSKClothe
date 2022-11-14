@@ -10,7 +10,8 @@ namespace DSK_Clothes.ConnectionDatabase
 {
     public class ConnectUser
     {
-        string conStr = "Data Source=DESKTOP-U7DTMNK;Initial Catalog=QL_BANHANG;Integrated Security=True";
+        string conStr = "Data Source=DESKTOP-U7DTMNK;Initial Catalog=QL_BANHANG;Persist Security Info=True;User ID=sa;Password=123";
+        //string conStr = "Data Source=DESKTOP-U7DTMNK;Initial Catalog=QL_BANHANG;Integrated Security=True";
 
         //------------------------------------------------- LẤY TẤT CẢ THÔNG TIN CỦA KHÁCH HÀNG
         public List<User> getAllUser()

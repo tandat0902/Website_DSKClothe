@@ -253,7 +253,6 @@
     <Content Include="Views\SignUp\SignUp.cshtml" />
     <Content Include="Views\SignUp\LogIn.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
-    <Content Include="Views\Home\delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
