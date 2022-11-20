@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Xem chi tiết sản phẩm";
+}
+
+@model DSK_Clothes.Models.Product
+
+@*---------------
+    ------------------------------------- HEADER *@
+@Html.Partial("HeaderNavbarEmp", "Shared")
+
+<main class="main">
+    <div class="bc">
+        <div class="con">
+            <div class="sec-30">
+                <div class="con fl-wrap mona-wrap-shop">
+                    <div class="col-7">
+                        <div class="product__imgs page-buy">
+                            <ul class="product__imgs-pc">
+                                <li><img src="/Images/img-home/@Html.DisplayFor(p => p.Hinh)" alt="" onclick="changeImage('one')" id="one"></li>
+                            </ul>
+                            <div id="main-img">
+
+                                <img src="/Images/img-home/@Html.DisplayFor(p => p.Hinh)" alt="" id="img-main">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="shop-dt">
+                            <div class="list-group-item">
+                                <div class="was-validated">
+                                    <div class="detail-pr" title="DSK CLOTHES® @Html.DisplayFor(p => p.TenSP, new { @class = "form-control" })">
+                                        <h5 class="name__pr">DSK CLOTHES® @Html.DisplayFor(p => p.TenSP, new { @class = "form-control" })</h5>
+                                    </div>
+                                    <div class="detail-pr price__pr">
+                                        <h4>@Html.DisplayFor(p => p.Gia) <span>vnđ</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop-dt">
+                            <div class="fl-ct shop-dt__title shopOp" onclick="showHide1()">
+                                <div class="mg-r-auto txt-title">Thông tin</div>
+                                <div class="shop-dt__open fl-ct ">
+                                    <img src="https://levents.asia/template/assets/images/svg/ic-arr.svg" alt="Alternate Text" />
+                                </div>
+                            </div>
+                            <div class="shop-dt__hid shopHid" id="show-hide1">
+                                <div class="mona-content shop-dt__txt">
+                                    <p>DSK CLOTHES® @Html.DisplayFor(p => p.TenSP)</p>
+                                    <p>Chất liệu: @Html.DisplayFor(p => p.ChatLieu)</p>
+                                    <p>Nước sản xuất: @Html.DisplayFor(p => p.NuocSX)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back-home">
+                <a href="~/HomeOfEmp/HomeOfEmp">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                            <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
+                        </svg>
+                        Return to Clothing
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>  

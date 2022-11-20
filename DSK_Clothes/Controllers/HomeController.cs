@@ -18,7 +18,7 @@ namespace DSK_Clothes.Controllers
 
         public ActionResult Home()
         {
-            var listProduct = cnp.getAllProduct();
+            var listProduct = cnp.get8Product();
             if (listProduct.Count == 0)
             {
                 TempData["MessageError"] = "Kho hàng không có sản phẩm nào cả!";
@@ -28,10 +28,11 @@ namespace DSK_Clothes.Controllers
 
         public ActionResult Details(int id)
         {
-            var listProduct = cnp.getProductByID(id);
-            if (listProduct.Count == 0)
+            var listProduct = cnp.getProductByID(id).FirstOrDefault();
+            if (listProduct == null)
             {
-                TempData["MessageError"] = "Kho hàng không có sản phẩm nào cả!";
+                TempData["MessageError"] = "Không tồn tại sản phẩm này!";
+                return RedirectToAction("HomeOfEmp", "HomeOfEmp");
             }
             return View(listProduct);
         }

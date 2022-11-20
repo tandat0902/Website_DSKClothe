@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+@model IEnumerable<DSK_Clothes.Models.Product>
+
+
+@*---------------
+------------------------------------- HEADER *@
+@Html.Partial("HeaderNavBarEmp", "Shared")
+
+<main class="main">
+    <div class="ban-emp">
+    </div>
+
+    <div class="info_alert alert-as">
+        @if (TempData["MessageSuccess"] != null)
+        {
+            <div class="alert alert-success fade show alert-hide jus-spa" role="alert">
+                <strong>Thông báo: </strong> @TempData["MessageSuccess"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        @if (TempData["MessageError"] != null)
+        {
+            <div class="alert alert-danger fade show alert-hide jus-spa" role="alert">
+                <strong>Thông báo: </strong> @TempData["MessageError"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+    </div>
+
+    @*------------------------------------------------ NEW COLLECTION ------------------------------------------------*@
+    <section class="sec-60 pd-0 abs">
+        <div class="con">
+            <h2 class="sec-title">
+                DANH SÁCH SẢN PHẨM
+            </h2>
+            <div class="pd__list fl-wrap">
+                @foreach (var item in Model)
+                {
+                    <div class="col-3">
+                        <div class="pd__item aos-init aos-animate" title="DSK CLOTHES® | @Html.DisplayFor(modelItem => item.TenSP)">
+                            <div class="pd__top coJS ">
+                                <div class="rto-box">
+                                    <img width="300" height="300" src="/Images/img-home/@Html.DisplayFor(modelItem => item.Hinh)" alt="Alternate Text" />
+                                </div>
+                            </div>
+                            <div class="pd__bot">
+                                @Html.ActionLink("DSK CLOTHES® | " + @Html.DisplayFor(modelItem => item.TenSP), "Details", new { id = item.MaSP }, new { @class = "pd__title" })
+                                <div class="pd__price">
+                                    <span class="big m-black">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                @Html.DisplayFor(modelItem => item.Gia)
+                                                <span class="woocommerce-Price-currencySymbol">vnđ</span>
+                                            </bdi>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="btn-action fl-wrap jus-ev mg-t-txt">
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }, new { @class = "btn btn-success" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.MaSP }, new { @class = "btn btn-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

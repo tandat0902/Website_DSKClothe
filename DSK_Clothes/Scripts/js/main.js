@@ -69,8 +69,8 @@ function showHide3() {
 }
 
 //-------------------- AUTO HIDE ALERT
-//window.setTimeout(function () {
-//    $(".alert").fadeTo(3000, 0).slideUp(500, function () {
-//        $(this).remove();
-//    });
-//})
+window.setTimeout(function () {
+    $(".alert-hide").fadeTo(10000, 0).slideUp(500, function () {
+        $(this).remove();
+    });
+})

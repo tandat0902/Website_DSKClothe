@@ -13,7 +13,7 @@ namespace DSK_Clothes.ConnectionDatabase
         string conStr = "Data Source=DESKTOP-U7DTMNK;Initial Catalog=QL_BANHANG;Persist Security Info=True;User ID=sa;Password=123";
         //string conStr = "Data Source=DESKTOP-U7DTMNK;Initial Catalog=QL_BANHANG;Integrated Security=True";
 
-        //------------------------------------------------- LẤY TẤT CẢ THÔNG TIN CỦA KHÁCH HÀNG
+        //------------------------------------------------- LẤY TẤT CẢ THÔNG TIN CỦA NGƯỜI DÙNG
         public List<User> getAllUser()
         {
             List<User> listUser = new List<User>();
@@ -21,7 +21,7 @@ namespace DSK_Clothes.ConnectionDatabase
             {
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM KHACHHANG";
+                cmd.CommandText = "SELECT * FROM TAIKHOAN";
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -39,7 +39,8 @@ namespace DSK_Clothes.ConnectionDatabase
                         Email = row["EMAIL"].ToString(),
                         Tel = row["SODT"].ToString(),
                         BirthDay = row["NGAYSINH"].ToString(),
-                        Password = row["MATKHAU"].ToString()
+                        Password = row["MATKHAU"].ToString(),
+                        MaQuyen = (int)row["MAQUYEN"]
                     });
                 }
                 return listUser;
@@ -55,14 +56,14 @@ namespace DSK_Clothes.ConnectionDatabase
             {
                 SqlCommand cmd1 = con.CreateCommand();
                 cmd1.CommandType = CommandType.Text;
-                cmd1.CommandText = "SELECT COUNT(*) FROM KHACHHANG WHERE SODT = '" + u.Tel + "'";
+                cmd1.CommandText = "SELECT COUNT(*) FROM TAIKHOAN WHERE SODT = '" + u.Tel + "'";
                 con.Open();
                 kt = (int)cmd1.ExecuteScalar();
                 if (kt == 0)
                 {
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    string sql = "INSERT INTO KHACHHANG(HOTEN, EMAIL, SODT, NGAYSINH, MATKHAU) ";
+                    string sql = "INSERT INTO TAIKHOAN(HOTEN, EMAIL, SODT, NGAYSINH, MATKHAU) ";
                     sql += "VALUES ('" + u.FullName + "', '" + u.Email + "', '" + u.Tel + "', '" + u.BirthDay + "', '" + u.Password + "')";
                     cmd.CommandText = sql;
 
@@ -85,7 +86,7 @@ namespace DSK_Clothes.ConnectionDatabase
             {
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                string sql = "SELECT * FROM KHACHHANG WHERE SODT = '" + SODT + "'";
+                string sql = "SELECT * FROM TAIKHOAN WHERE SODT = '" + SODT + "'";
                 cmd.CommandText = sql;
                 con.Open();
                 kt = (int)cmd.ExecuteScalar();

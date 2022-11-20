@@ -73,7 +73,14 @@ namespace DSK_Clothes.Controllers
                         {
                             if (Tel == item.Tel && Password == item.Password)
                             {
-                                return RedirectToAction("Home", "Home");
+                                if (item.MaQuyen == 1)
+                                {
+                                    return RedirectToAction("Home", "Home");
+                                }
+                                else
+                                {
+                                    return RedirectToAction("HomeOfEmp", "HomeOfEmp");
+                                }
                             }
                             if (Tel == item.Tel && Password != item.Password)
                             {

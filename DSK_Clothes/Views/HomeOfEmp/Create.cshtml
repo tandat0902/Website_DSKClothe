@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Thêm sản phẩm mới";
+}
+
+@model DSK_Clothes.Models.Product
+
+@*---------------
+------------------------------------- HEADER *@
+@Html.Partial("HeaderNavbarEmp", "Shared")
+
+<main class="main">
+    <div class="form-su">
+        <div class="header_form">THÊM MỚI SẢN PHẨM</div>
+        <div class="info_alert">
+            @if (TempData["MessageSuccess"] != null)
+            {
+                <div class="alert alert-success fade show" role="alert">
+                    <strong>Thông báo: </strong> @TempData["MessageSuccess"] 
+                </div>
+            }
+            @if (TempData["MessageError"] != null)
+            {
+                <div class="alert alert-danger fade show" role="alert">
+                    <strong>Thông báo: </strong> @TempData["MessageError"]
+                </div>
+            }
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <form>
+                <div class="body_form">
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.TenSP, new { @type = "text", @class = "rs-form form__inp", @placeholder = "Tên sản phẩm" })
+                        @Html.ValidationMessageFor(p => p.TenSP, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.NuocSX, new { @type = "text", @class = "rs-form form__inp", @placeholder = "Nước sản xuất" })
+                        @Html.ValidationMessageFor(p => p.NuocSX, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.ChatLieu, new { @type = "text", @class = "rs-form form__inp", @placeholder = "Chất liệu" })
+                        @Html.ValidationMessageFor(p => p.ChatLieu, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.Hinh, new { @type = "file", @class = "rs-form form__inp", @placeholder = "Hình" })
+                        @Html.ValidationMessageFor(p => p.Hinh, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.TextBoxFor(p => p.Gia, new { @type = "text", @class = "rs-form form__inp", @placeholder = "Giá bán" })
+                        @Html.ValidationMessageFor(p => p.Gia, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="input_form">
+                        @Html.DropDownListFor(p => p.MaLoaiSP, new List<SelectListItem> 
+                        { 
+                            new SelectListItem { Text = "1. Áo", Value = "1"},
+                            new SelectListItem { Text = "2. Quần", Value = "2"},
+                            new SelectListItem { Text = "3. Outerwear", Value = "3"},
+                            new SelectListItem { Text = "4. Balo", Value = "4"},
+                        }, "Chọn loại sản phẩm", new { @class = "rs-form form__inp form-size-box" })
+                        @Html.ValidationMessageFor(p => p.MaLoaiSP, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="submit__btn mr-b">
+                        <button type="submit" class="btn-dark unlock-btn">Thêm mới</button>
+                    </div>
+                </div>
+            </form>
+        }
+        <div class="back-home">
+            <a href="~/HomeOfEmp/HomeOfEmp">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                        <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
+                    </svg>
+                    Return to Home
+                </p>
+            </a>
+        </div>
+    </div>
+</main>
+

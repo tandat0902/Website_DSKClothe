@@ -541,6 +541,11 @@ body{
     margin-bottom: 221rem;
 }
 
+.ban-emp{
+    position:relative;
+    margin-bottom: 15rem;
+}
+
 .abs{
     position: absolute;
     top: 90%;
@@ -672,6 +677,10 @@ body{
 
 .jus-ct{
     justify-content: center;
+}
+
+.jus-ev{
+    justify-content: space-evenly;
 }
 
 .fl-con{
@@ -1164,4 +1173,33 @@ body{
 .back-home a:hover{
     color: #232323;
     font-weight: 600;
+}
+
+/*-------------------------------------------------------- STYLE HOME EMPLOYEE --------------------------------------------------------*/
+.form-size-box{
+    width: 100%;
+    font-size: 15px;
+    height: 2rem;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    opacity: 0.6;
+    border: none;
+    border-bottom: 2px solid #c0c0c0;
+}
+
+.form-size-box:focus{
+    opacity: 1;
+    outline: none;
+    box-shadow: none;
+}
+
+.alert-as{
+    position: absolute;
+    top: 3.6rem;
+    right: -5px;
+    z-index: 1000;
+}
+
+.btn-action a{
+    width: 7rem;
 }

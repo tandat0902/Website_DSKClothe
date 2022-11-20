@@ -33,5 +33,6 @@ namespace DSK_Clothes.Models
         [Required(ErrorMessage = "Bắt buộc nhập Lại mật khẩu!")]
         [Compare("Password", ErrorMessage = "Mật khẩu không khớp!")]
         public string ConfirmPassword { get; set; }
+        public int MaQuyen { get; set; }
     }
 }

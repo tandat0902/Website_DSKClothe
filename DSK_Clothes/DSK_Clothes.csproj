@@ -129,6 +129,7 @@
     <Compile Include="ConnectionDatabase\ConnectProduct.cs" />
     <Compile Include="ConnectionDatabase\ConnectUser.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeOfEmpController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -212,6 +213,7 @@
     <Content Include="Images\img-home\font_5.jpg" />
     <Content Include="Images\img-home\font_6.jpg" />
     <Content Include="Images\img-home\furassic-girl-tee.png" />
+    <Content Include="Images\img-home\punch-varsity.jpg" />
     <Content Include="Images\img-home\stick-talk-tee.png" />
     <Content Include="Images\img-home\the-face-tee.png" />
     <Content Include="Images\img-home\two-angels-beaty-hoodie.png" />
@@ -253,6 +255,11 @@
     <Content Include="Views\SignUp\SignUp.cshtml" />
     <Content Include="Views\SignUp\LogIn.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\HomeOfEmp\HomeOfEmp.cshtml" />
+    <Content Include="Views\Shared\HeaderNavBarEmp.cshtml" />
+    <Content Include="Views\HomeOfEmp\Create.cshtml" />
+    <Content Include="Views\HomeOfEmp\Edit.cshtml" />
+    <Content Include="Views\HomeOfEmp\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

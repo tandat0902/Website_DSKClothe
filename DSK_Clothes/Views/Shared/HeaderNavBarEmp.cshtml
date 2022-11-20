@@ -23,7 +23,7 @@
             <div class="col-4"></div>
             <div class="col-4">
                 <div class="hd__logo">
-                    <a href="~/Home/Home"><img src="/Images/logo.gif" alt="DSK Clothes" title="DSK Clothes" /></a>
+                    <a href="~/HomeOfEmp/HomeOfEmp"><img src="/Images/logo.gif" alt="DSK Clothes" title="DSK Clothes" /></a>
                 </div>
             </div>
             <div class="col-4">
@@ -64,7 +64,7 @@
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                             </svg>
-                        </a>               
+                        </a>
                     </div>
                     <div class="hd__lang pd-lr">
                         <div class="lang actPanel">
@@ -83,62 +83,10 @@
                 <div class="menu__wrap">
                     <ul id="menu-main-menu">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-890" id="menu-item-890">
-                            @Html.ActionLink("Về chúng tôi", "AboutUs", "Home")   
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307" id="menu-item-307"> 
-                            @Html.ActionLink("Shop", "Shop", "Home")
-                            <span><i class="fas fa-angle-down"></i></span>
-                            <ul class="submenu">
-                                <li class="submenu__item">
-                                    <a href="#">Tất cả</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#">New Arrival</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#">T - shirt</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#">Polo</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#">Outerwear</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#">Quần</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#">Ba lô</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#">Phụ kiện</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#">BST</a>
-                                </li>
-                            </ul>
-                            
+                            @Html.ActionLink("Thêm mới", "Create", "HomeOfEmp")
                         </li>
                         <li class="red menu-item menu-item-type-post_type menu-item-object-page menu-item-622385" id="menu-item-622385">
-                            @Html.ActionLink("Sale-off", "SaleOff", "Home") 
-                        </li>  
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305" id="menu-item-305">
-                            @Html.ActionLink("Bộ sưu tập", "Collection", "Home") 
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304" id="menu-item-304">
-                            @Html.ActionLink("Outfits", "Outfits", "Home")
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4398" id="menu-item-4398">
-                            @Html.ActionLink("Blog", "Blog", "Home")
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171" id="menu-item-171">
-                            @Html.ActionLink("Liên hệ", "Contact", "Home")
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-172" id="menu-item-172">
-                            @Html.ActionLink("Chăm sóc khách hàng", "Care", "Home")
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-639205" id="menu-item-639205">
-                            @Html.ActionLink("Tuyển dụng", "Recruit", "Home")
+                            @Html.ActionLink("Sắp xếp", "SortAscending", "HomeOfEmp")
                         </li>
                     </ul>
                 </div>
@@ -146,3 +94,4 @@
         </div>
     </div>
 </header>
+

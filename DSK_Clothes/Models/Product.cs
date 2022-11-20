@@ -13,5 +13,6 @@ namespace DSK_Clothes.Models
         public string ChatLieu { get; set; }
         public string Hinh { get; set; }
         public string Gia { get; set; }
+        public int MaLoaiSP { get; set; }
     }
 }

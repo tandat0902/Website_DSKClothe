@@ -30,7 +30,7 @@ GO
 --GO
 
 -- KHACHANG
-CREATE TABLE KHACHHANG
+CREATE TABLE TAIKHOAN
 (
 	MAKH	INT NOT NULL IDENTITY(1, 1),	
 	HOTEN	NVARCHAR(30),
@@ -38,21 +38,29 @@ CREATE TABLE KHACHHANG
 	SODT	VARCHAR(10),
 	NGAYSINH DATE,
 	MATKHAU	VARCHAR(20),
+	MAQUYEN INT,
 	CONSTRAINT PK_KHACHHANG PRIMARY KEY(MAKH)
 );
 
-
+---------------------------------------------
+-- QUYỀN TRUY CẬP
+CREATE TABLE QUYENTRUYCAP
+(
+	MAQUYEN	INT NOT NULL IDENTITY(1, 1),	
+	TENQUYEN	NVARCHAR(40),
+	CONSTRAINT PK_QUYENTRUYCAP PRIMARY KEY(MAQUYEN)
+);
 
 ---------------------------------------------
 -- NHANVIEN
-CREATE TABLE NHANVIEN
-(
-	MANV	INT NOT NULL IDENTITY(1, 1),	
-	HOTEN	NVARCHAR(40),
-	SODT	VARCHAR(10),
-	VITRI	NVARCHAR(60),
-	CONSTRAINT PK_NHANVIEN PRIMARY KEY(MANV)
-);
+--CREATE TABLE NHANVIEN
+--(
+--	MANV	INT NOT NULL IDENTITY(1, 1),	
+--	HOTEN	NVARCHAR(40),
+--	SODT	VARCHAR(10),
+--	VITRI	NVARCHAR(60),
+--	CONSTRAINT PK_NHANVIEN PRIMARY KEY(MANV)
+--);
 ---------------------------------------------
 -- SANPHAM
 CREATE TABLE SANPHAM
@@ -63,9 +71,19 @@ CREATE TABLE SANPHAM
 	CHATLIEU NVARCHAR(30),
 	HINH VARCHAR(100),
 	GIA DECIMAL(18, 0),
+	MALOAISP INT,
 	CONSTRAINT PK_SANPHAM PRIMARY KEY(MASP)
 );
 	
+---------------------------------------------
+-- LOAISANPHAM
+CREATE TABLE LOAISANPHAM
+(
+	MALOAISP INT NOT NULL IDENTITY(1, 1),
+	TENLOAISP NVARCHAR(60),
+	CONSTRAINT PK_LOAISANPHAM PRIMARY KEY(MALOAISP)
+);
+
 ---------------------------------------------
 -- HOADON
 CREATE TABLE HOADON
@@ -73,7 +91,6 @@ CREATE TABLE HOADON
 	SOHD INT NOT NULL IDENTITY(1, 1),
 	NGHD DATE,
 	MAKH INT,
-	MANV INT,
 	TRIGIA DECIMAL(18, 0),
 	CONSTRAINT PK_HOADON PRIMARY KEY(SOHD)
 );
@@ -86,13 +103,18 @@ CREATE TABLE HOADON
 	SL INT,
 	CONSTRAINT PK_CTHD PRIMARY KEY(SOHD,MASP)
 );
+---------------------------------------------
+-- Khoa ngoai cho bang TAIKHOAN
+ALTER TABLE TAIKHOAN 
+ADD CONSTRAINT FK_TAIKHOAN_QUYENTRUYCAP FOREIGN KEY(MAQUYEN) REFERENCES QUYENTRUYCAP(MAQUYEN)
+
+-- Khoa ngoai cho bang SANPHAM
+ALTER TABLE SANPHAM 
+ADD CONSTRAINT FK_SANPHAM_LOAISANPHAM FOREIGN KEY(MALOAISP) REFERENCES LOAISANPHAM(MALOAISP)
 
 -- Khoa ngoai cho bang HOADON
 ALTER TABLE HOADON 
-ADD CONSTRAINT FK_HOADON_KHACHHANG FOREIGN KEY(MAKH) REFERENCES KHACHHANG(MAKH)
-
-ALTER TABLE HOADON 
-ADD CONSTRAINT FK_HOADON_NHANVIEN FOREIGN KEY(MANV) REFERENCES NHANVIEN(MANV)
+ADD CONSTRAINT FK_HOADON_TAIKHOAN FOREIGN KEY(MAKH) REFERENCES TAIKHOAN(MAKH)
 
 -- Khoa ngoai cho bang CTHD
 ALTER TABLE CTHD 
@@ -106,12 +128,20 @@ ALTER TABLE SANPHAM
 ADD CONSTRAINT CHK_GIA CHECK (GIA > 0)
 ALTER TABLE HOADON 
 ADD CONSTRAINT CHK_TRIGIA CHECK (TRIGIA > 0)
-
+ALTER TABLE TAIKHOAN
+ADD CONSTRAINT DF_MATK DEFAULT 1 FOR MAQUYEN
 
 -------------------------------
--- KHACHHANG
+-- LOAITAIKHOAN
+INSERT INTO QUYENTRUYCAP(TENQUYEN)
+VALUES
+(N'Khách hàng'),
+(N'Nhân viên');
+
+-------------------------------
+-- TAIKHOAN
 SET DATEFORMAT DMY
-INSERT INTO KHACHHANG(HOTEN, EMAIL, SODT, NGAYSINH, MATKHAU)
+INSERT INTO TAIKHOAN(HOTEN, EMAIL, SODT, NGAYSINH, MATKHAU)
 VALUES
 (N'Phạm Trần Tấn Đạt','tandat.pham292@gmail.com','0862616215','22/09/2002','123456'),
 (N'Nguyễn Văn A', 'anguyen123@gmail.com','0123456789','22/10/1960','123456'),
@@ -126,40 +156,49 @@ VALUES
 (N'Hà Duy Lập','lapha123@gmail.com','0127476789','02/05/1983','123456');
 
 -------------------------------
--- NHANVIEN
-INSERT INTO NHANVIEN(HOTEN, SODT, VITRI)
+---- NHANVIEN
+--INSERT INTO NHANVIEN(HOTEN, SODT, VITRI)
+--VALUES
+--(N'Phạm Trần Tấn Đạt','0123456789',N'CEO'),
+--(N'Kiều Đạo Nhất San','0122456389',N'Bảo vệ'),
+--( N'Nguyễn Minh Khoa','0121736789',N'CEO'),
+--(N'Ngô Thanh Tuấn','0116367890',N'Bán Hàng'),
+--(N'Nguyễn Thị Trúc Anh','0483428589',N'Bán Hàng'),
+--(N'Nguyễn Trần Duy Nhất','0323456789',N'Bán Hàng'),
+--(N'Lê Thị Mộng Gấm','0323456789',N'Nhân viên chăm sóc khách hàng');
+
+-------------------------------
+-- LOAISANPHAM
+INSERT INTO LOAISANPHAM(TENLOAISP)
 VALUES
-(N'Phạm Trần Tấn Đạt','0123456789',N'CEO'),
-(N'Kiều Đạo Nhất San','0122456389',N'Bảo vệ'),
-( N'Nguyễn Minh Khoa','0121736789',N'CEO'),
-(N'Ngô Thanh Tuấn','0116367890',N'Bán Hàng'),
-(N'Nguyễn Thị Trúc Anh','0483428589',N'Bán Hàng'),
-(N'Nguyễn Trần Duy Nhất','0323456789',N'Bán Hàng'),
-(N'Lê Thị Mộng Gấm','0323456789',N'Nhân viên chăm sóc khách hàng');
+(N'Áo'),
+(N'Quần'),
+(N'Outerwear'),
+(N'Balo');
 
 -------------------------------
 -- SANPHAM
-INSERT INTO SANPHAM(TENSP, NUOCSX, CHATLIEU, HINH, GIA)
+INSERT INTO SANPHAM(TENSP, NUOCSX, CHATLIEU, HINH, GIA, MALOAISP)
 VALUES
-(N'COACHELLA HEAVY TEE', N'Việt Nam',N'Cotton', '/Images/img-home/coachella-beaty-tee.png', 895000),
-(N'JURASSIC GIRL TEE', N'Việt Nam',N'Cotton', '/Images/img-home/furassic-girl-tee.png', 1250000),
-(N'TWO ANGELS SHORTS', N'Việt Nam',N'Nỉ Da Cá','/Images/img-home/two-angels-shorts.png', 450000),
-(N'STICK TALK TEE', N'Việt Nam',N'Cotton', '/Images/img-home/stick-talk-tee.png', 895000),
-(N'THE FACE TEE', N'Việt Nam',N'Cotton', '/Images/img-home/the-face-tee.png', 895000),
-(N'TWO ANGELS HEAVY HOODIE', N'Việt Nam',N'Nỉ Da Cá', '/Images/img-home/two-angels-beaty-hoodie.png', 450000),
-(N'TWO ANGELS SHIRT', N'Việt Nam',N'Cotton', '/Images/img-home/two-angle-shirt.png', 895000),
-(N'COACHELLA HEAVY FLEECE PANTS', N'Việt Nam',N'Cotton', '/Images/img-home/coachella-beaty-fleece-pants.png', 895000);
+(N'COACHELLA HEAVY TEE', N'Việt Nam',N'Cotton', 'coachella-beaty-tee.png', 895000, 1),
+(N'JURASSIC GIRL TEE', N'Việt Nam',N'Cotton', 'furassic-girl-tee.png', 1250000, 1),
+(N'TWO ANGELS SHORTS', N'Việt Nam',N'Nỉ Da Cá','two-angels-shorts.png', 450000, 2),
+(N'STICK TALK TEE', N'Việt Nam',N'Cotton', 'stick-talk-tee.png', 895000, 1),
+(N'THE FACE TEE', N'Việt Nam',N'Cotton', 'the-face-tee.png', 895000, 1),
+(N'TWO ANGELS HEAVY HOODIE', N'Việt Nam',N'Nỉ Da Cá', 'two-angels-beaty-hoodie.png', 450000, 3),
+(N'TWO ANGELS SHIRT', N'Việt Nam',N'Cotton', 'two-angle-shirt.png', 895000, 1),
+(N'COACHELLA HEAVY FLEECE PANTS', N'Việt Nam',N'Cotton', 'coachella-beaty-fleece-pants.png', 895000, 2);
 
 -------------------------------
 -- HOADON
 SET DATEFORMAT DMY
-INSERT INTO HOADON(NGHD, MAKH, MANV, TRIGIA)
+INSERT INTO HOADON(NGHD, MAKH, TRIGIA)
 VALUES
-('23/07/2022',1, 5, 800000),
-('12/08/2022', 10, 4, 2200000),
-('23/08/2022',2, 5, 2000000),
-('01/09/2022',6, 6, 1200000),
-('20/10/2022',5, 4, 1000000);
+('23/07/2022',1, 800000),
+('12/08/2022', 10, 2200000),
+('23/08/2022',2, 2000000),
+('01/09/2022',6, 1200000),
+('20/10/2022',5, 1000000);
 
 -------------------------------
 -- CTHD
@@ -175,6 +214,4 @@ VALUES
 
 ----------------------------------------------------------------
 ----------------------------------------------------------------
-
-SELECT * 
-FROM KHACHHANG
+SELECT * FROM SANPHAM
