@@ -10,7 +10,7 @@ namespace DSK_Clothes.Models
 {
     public class User
     {
-        public int MaKH { get; set; }
+        public int MaTK { get; set; }
 
         [Required(ErrorMessage = "Bắt buộc nhập Họ và tên!")]
         [StringLength(50)]

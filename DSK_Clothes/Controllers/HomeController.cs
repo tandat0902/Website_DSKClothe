@@ -37,6 +37,58 @@ namespace DSK_Clothes.Controllers
             return View(listProduct);
         }
 
+        [HttpPost]
+        public ActionResult Details(int id, Product p, FormCollection f)
+        {
+            //if (p.KichThuoc != null)
+            //{
+            Session["ms"] = id;
+            Session["strURL"] = Request.Url.ToString();
+            Session["size"] = p.KichThuoc;
+            var ms = Session["ms"];
+            var strURL = Session["strURL"];
+            var size = Session["size"];
+            var sl = int.Parse(f["txtSoLuong"].ToString());
+            return RedirectToAction("ThemGioHang", "Cart", new { ms = ms, strURL = strURL, size = size, sl = sl });
+        }
+
+        public ActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public ActionResult Shop()
+        {
+            var listProduct = cnp.getAllProduct();
+            if (listProduct.Count == 0)
+            {
+                TempData["MessageError"] = "Kho hàng không có sản phẩm nào cả!";
+            }
+            return View(listProduct);
+        }
+
+        public ActionResult SaleOff()
+        {
+            return View();
+        }
+
+        public ActionResult Blog()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+        public ActionResult CustomerCare()
+        {
+            return View();
+        }
+        public ActionResult Recruit()
+        {
+            return View();
+        }
 
         public ActionResult Error()
         {

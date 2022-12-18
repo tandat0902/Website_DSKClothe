@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -128,12 +129,19 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="ConnectionDatabase\ConnectProduct.cs" />
     <Compile Include="ConnectionDatabase\ConnectUser.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeOfEmpController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\dbQuanLyBanHang.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbQuanLyBanHang.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,8 +203,63 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\img-contact\325hoangsa.jpg" />
+    <Content Include="Images\img-contact\cantho.jpg" />
+    <Content Include="Images\img-contact\playground.jpeg" />
+    <Content Include="Images\img-contact\suvanhanh.jpg" />
+    <Content Include="Images\img-customer\farbic1.jpeg" />
+    <Content Include="Images\img-customer\farbic2.png" />
+    <Content Include="Images\img-recruit\1.jpg" />
+    <Content Include="Images\img-recruit\2.jpeg" />
+    <Content Include="Models\dbQuanLyBanHang.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbQuanLyBanHang.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\circle.png" />
+    <Content Include="Images\img-blog\imgblog\1.jpeg" />
+    <Content Include="Images\img-blog\imgblog\10.png" />
+    <Content Include="Images\img-blog\imgblog\11.png" />
+    <Content Include="Images\img-blog\imgblog\12.png" />
+    <Content Include="Images\img-blog\imgblog\13.png" />
+    <Content Include="Images\img-blog\imgblog\14.png" />
+    <Content Include="Images\img-blog\imgblog\15.png" />
+    <Content Include="Images\img-blog\imgblog\16.png" />
+    <Content Include="Images\img-blog\imgblog\17.png" />
+    <Content Include="Images\img-blog\imgblog\18.png" />
+    <Content Include="Images\img-blog\imgblog\19.png" />
+    <Content Include="Images\img-blog\imgblog\2.jpeg" />
+    <Content Include="Images\img-blog\imgblog\20.png" />
+    <Content Include="Images\img-blog\imgblog\21.jpg" />
+    <Content Include="Images\img-blog\imgblog\22.jpg" />
+    <Content Include="Images\img-blog\imgblog\23.jpg" />
+    <Content Include="Images\img-blog\imgblog\24.jpg" />
+    <Content Include="Images\img-blog\imgblog\25.jpg" />
+    <Content Include="Images\img-blog\imgblog\26.jpg" />
+    <Content Include="Images\img-blog\imgblog\27.jpg" />
+    <Content Include="Images\img-blog\imgblog\28.jpg" />
+    <Content Include="Images\img-blog\imgblog\29.jpg" />
+    <Content Include="Images\img-blog\imgblog\3.jpeg" />
+    <Content Include="Images\img-blog\imgblog\30.png" />
+    <Content Include="Images\img-blog\imgblog\31.png" />
+    <Content Include="Images\img-blog\imgblog\4.jpeg" />
+    <Content Include="Images\img-blog\imgblog\5.jpeg" />
+    <Content Include="Images\img-blog\imgblog\6.jpeg" />
+    <Content Include="Images\img-blog\imgblog\7.jpeg" />
+    <Content Include="Images\img-blog\imgblog\8.jpeg" />
+    <Content Include="Images\img-blog\imgblog\9.jpeg" />
+    <Content Include="Images\img-blog\imgshoppingtips\1.png" />
+    <Content Include="Images\img-blog\imgstyletips\1.png" />
+    <Content Include="Images\img-blog\imgstyletips\2.png" />
+    <Content Include="Images\img-blog\imgstyletips\3.png" />
+    <Content Include="Images\img-blog\imgstyletips\4.png" />
+    <Content Include="Images\img-blog\imgstyletips\5.png" />
+    <Content Include="Images\img-blog\img\1.jpg" />
+    <Content Include="Images\img-blog\img\2.png" />
+    <Content Include="Images\img-blog\img\3.png" />
+    <Content Include="Images\img-blog\img\4.png" />
+    <Content Include="Images\img-blog\img\5.png" />
     <Content Include="Images\img-home\back_1.jpg" />
     <Content Include="Images\img-home\back_2.jpg" />
     <Content Include="Images\img-home\back_3.jpg" />
@@ -260,12 +323,29 @@
     <Content Include="Views\HomeOfEmp\Create.cshtml" />
     <Content Include="Views\HomeOfEmp\Edit.cshtml" />
     <Content Include="Views\HomeOfEmp\Details.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Home\Shop.cshtml" />
+    <Content Include="Views\Cart\GioHang.cshtml" />
+    <Content Include="Views\Cart\GioHangPartial.cshtml" />
+    <Content Include="Views\Home\SaleOff.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\CustomerCare.cshtml" />
+    <Content Include="Views\Home\Recruit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\dbQuanLyBanHang.dbml.layout">
+      <DependentUpon>dbQuanLyBanHang.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Tuyển dụng";
+}
+
+@*---------------
+    ------------------------------------- HEADER *@
+@Html.Partial("HeaderNavbar", "Shared")
+
+<main class="main">
+    <div class="banner-f">
+        <img src="/Images/img-recruit/1.jpg" width="100%" />
+    </div>
+    <div class="btn-local">
+        <button type="button">Xem các vị trí</button>
+    </div>
+    <nav class="nav">
+        @Html.ActionLink("Trang chủ", "Home", "Home", new { @class = "nav-link" })  /
+        <p class="txt-b txt-p0-5">Tuyển dụng</p>
+    </nav>
+    <div class="recruit">
+        <h1>Văn hóa</h1>
+
+        <p>
+            DSK CLOTHES® luôn chú trọng đến văn hoá làm việc tại công ty . Tôn trọng sự sáng tạo và đột phá trong từng cá nhân, chúng tôi xây dựng văn hoá làm việc hiện đại, tiên tiến và lành mạnh, luôn hướng tới công ty hàng đầu trong lĩnh vực thời trang.</br></br>
+            Tài sản lớn nhất của DSK CLOTHES® là con người, vì vậy chúng tôi luôn có các chính sách để phát triển năng lực của từng cá nhân, và tạo điều kiện phát triển cho các nhân sự có tài năng, chúng tôi ưu tiên nhiều cho các tài năng trẻ, đào tạo các bạn từ còn đang học trên ghế nhà trường đến lúc bạn có thể làm việc trực tiếp tại công ty.
+        </p></br>
+
+        <h1> Giá trị cốt lõi của dsk</h1>
+        <p>
+            <span>SÁNG TẠO: V</span>ì là trong lĩnh vực thời trang dành cho giới trẻ và cập nhật xu hương mới nhất nên luôn hướng đến sự sáng tạo để tạo nên những giá trị mới cho khách hàng và cho chính nhân viên. Vì lẽ đó, không gian làm việc tại</br>DSK CLOTHES® luôn được ban lãnh đạo đầu tư, thiết kế với thật nhiều không gian mở để các thành viên thỏa sức sáng tạo với cơ sở vật chất hiện đại, thân thiện môi trường.</br></br>
+
+            <span>TỬ TẾ: C</span>ông ty luôn dành sự tôn trọng đến đội ngũ nhân viên, xây dựng tính nhân văn trong mỗi suy nghĩ và hành động.</br></br>
+
+            <span>CHĂM CHỈ: C</span>húng tôi không ngại thử thách, hết lòng làm việc một cách hăng hái, luôn có trách nhiệm hoàn thành sứ mệnh của mình. Song đó, chúng tôi luôn tạo ra sân chơi, sự kiện lành mạnh cho các thành viên tại công ty.</br></br>
+
+            <span>KỶ LUẬT: V</span>ới tiêu chí “Kỷ luật là sợi dây kết nối giữa ước mơ và hiện thực”, DSK CLOTHES® luôn nâng cao tinh thần tự giác, tuân thủ quy định, ý thức trách nhiệm của mỗi cá nhân với trọng trách được giao.</br></br> </br></br></br></br>&nbsp;
+        </p>
+    </div>
+    <div class="banner-s">
+        <img src="/Images/img-recruit/2.jpeg" width="100%" />
+    </div>
+
+    <div class="info-recruit">
+        <h1>Tuyển dụng</h1>
+        <div class="body_form">
+            <div class="input_form">
+                <input type="text" name="register_name" required="" class="rs-form form__inp" placeholder="Họ và tên">
+            </div>
+            <div class="input_form">
+                <input type="email" name="register_name" required="" class="rs-form form__inp" placeholder="Email">
+            </div>
+            <div class="input_form">
+                <input type="tel" name="register_name" required="" class="rs-form form__inp" placeholder="Số điện thoại">
+            </div>
+            <div class="input_form">
+                <input type="date" name="register_name" required="" class="rs-form form__inp" placeholder="Ngày sinh">
+            </div>
+            <div class="input_form">
+                <input type="text" name="register_name" required="" class="rs-form form__inp" placeholder="Mô tả bản thân">
+            </div>
+            <div class="input_form">
+                <input type="text" name="register_name" required="" class="rs-form form__inp" placeholder="Kinh nghiệm làm việc">
+            </div>
+            <div class="box">
+                <div class="item">
+                    <div class="checkbox-rect2">
+                        <input type="checkbox" id="checkbox-rect2" name="check">
+                        <label for="checkbox-rect2">Tôi đồng ý với các điều khoản và điều kiện, chính sách bảo mật và chính sách việc làm tại DSK CLOTHES®</label>
+                    </div>
+                </div>
+            </div>
+            <div class="bnt-recruit">
+                <button type="button">Ứng tuyển</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</main>

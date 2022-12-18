@@ -1,6 +1,10 @@
 ﻿@model DSK_Clothes.Models.Product
 
-ViewBag.Title = "DSK CLOTHES® " + @Html.DisplayFor(p => p.TenSP);
+@{
+    var name = @Html.DisplayFor(p => p.TenSP);
+}
+
+ViewBag.Title = "DSK CLOTHES® " + name;
 
 
 @*---------------
@@ -12,7 +16,7 @@ ViewBag.Title = "DSK CLOTHES® " + @Html.DisplayFor(p => p.TenSP);
         <div class="con">
             <nav class="nav">
                 @Html.ActionLink("Trang chủ", "Home", "Home", new { @class = "nav-link" })  /
-                @Html.ActionLink("Shop", "Home", "Home", new { @class = "nav-link" })   /
+                @Html.ActionLink("Shop", "Shop", "Home", new { @class = "nav-link" })   /
                 <span>DSK CLOTHES® @Html.DisplayFor(p => p.TenSP)</span>
             </nav>
             <div class="sec-30">
@@ -31,9 +35,11 @@ ViewBag.Title = "DSK CLOTHES® " + @Html.DisplayFor(p => p.TenSP);
                     <div class="col-5">
                         <div class="shop-dt">
                             <div class="list-group-item">
+                                @*@using (Html.BeginForm("ThemGioHang", "Cart", new { @ms = Model.MaSP, @strURL = Request.Url.ToString(), @size = Model.KichThuoc, @sl = Model.SoLuong }))*@
                                 @using (Html.BeginForm())
                                 {
-                                    <form class="was-validated">
+                                    @Html.ValidationSummary(true)
+                                    <form class="was-validated" id="myform" >
                                         <div class="detail-pr">
                                             <h5 class="name__pr">DSK CLOTHES® @Html.DisplayFor(p => p.TenSP, new { @class = "form-control" })</h5>
                                         </div>
@@ -48,25 +54,29 @@ ViewBag.Title = "DSK CLOTHES® " + @Html.DisplayFor(p => p.TenSP);
                                         </div>
                                         <div class="detail-pr">
                                             <p class="txt-detail">Size:</p>
-                                            <select class="form-select">
-                                                <option selected>Chọn Size</option>
-                                                <option value="S">S</option>
-                                                <option value="M">M</option>
-                                                <option value="L">L</option>
-                                                <option value="XL">XL</option>
-                                            </select>
+                                            @Html.DropDownListFor(p => p.KichThuoc, new List<SelectListItem>
+                                               {
+                                                new SelectListItem{Text = "S", Value="S"},
+                                                new SelectListItem{Text = "M", Value="M"},
+                                                new SelectListItem{Text = "L", Value="L"},
+                                                new SelectListItem{Text = "XL", Value="XL"}
+                                               }, "Chọn Size", new { @class = "form-select" }) 
                                         </div>
                                         <div class="detail-pr fl-wrap">
                                             <p class="txt-detail mg-t-txt">Số lượng:</p>
                                             <div class="product__describe-custom">
                                                 <!-- <button class="reduced is-form" type="button" onclick="reducedItems()">-</button> -->
                                                 <input class="product__describe-custom-reduced is-form" type="button" value="-">
-                                                <input aria-label="quantity" class="product__describe-custom-input" max="100" min="1" name="" type="number" value="1">
+                                                @*@Html.TextBoxFor(p => p.SoLuong, new { @class="product__describe-custom-input", @max="100", @min="1", @name="", @type="number", @value="1" })*@
+                                                <input aria-label="quantity" class="product__describe-custom-input" max="100" min="1" name="txtSoLuong" type="number" value="1">
                                                 <input class="product__describe-custom-increase is-form" type="button" value="+">
                                                 <!-- <button class="increase is-form" type="button" onclick="reducedItems()">+</button> -->
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn-buy hov-buy btn-buy-sty mg-buy" title="Thêm vào giỏ hàng">Thêm vào giỏ</button>
+                                        @*<a class="btn-buy hov-buy btn-buy-sty mg-buy" href="@Url.Action("ThemGioHang", "Cart", new { @ms = Model.MaSP, @strURL = Request.Url.ToString(), @p = Model})" style="text-decoration:none">Thêm vào giỏ hàng</a>*@
+
+                                        <button type="submit" class="btn-buy hov-buy btn-buy-sty mg-buy" title="Thêm vào giỏ hàng">Thêm vào giỏ hàng</button>
+                                        <p class="text-danger danger-mb">@ViewBag.Message</p> 
                                     </form>
                                 }
                             </div>

@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Chăm sóc khách hàng";
+}
+
+@*---------------
+    ------------------------------------- HEADER *@
+@Html.Partial("HeaderNavbar", "Shared")
+
+<div class="container-cus">
+    <nav class="nav">
+        @Html.ActionLink("Trang chủ", "Home", "Home", new { @class = "nav-link" })  /
+        <p class="txt-b txt-p0-5">Chăm sóc khách hàng</p>
+    </nav>
+    <div class="title-cus">
+        <span>Chăm sóc khách hàng</span>
+    </div>
+    <div class="row-cus">
+        <div class="container overflow-hidden text-center">
+            <div class="row gx-5">
+                <div class="col">
+                    <div class="p-3 border bg-light">
+                        <a href="/Home/Farbic" style="text-decoration:none;color:black">DSK CLOTHES® FARBIC</a>
+                    </div>
+                    <div class="p-3 border bg-light">
+                        <a href="/Home/Membership" style="text-decoration:none;color:black">Chính sách MemberShip</a>
+                    </div>
+                    <div class="p-3 border bg-light">
+                        <a href="/Home/QandA" style="text-decoration:none;color:black">Q&A</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 border bg-light">
+                        <a href="/Home/Easyshopping" style="text-decoration:none;color:black">Easy Shopping</a>
+                    </div>
+                    <div class="p-3 border bg-light">
+                        <a href="/Home/Ship" style="text-decoration:none;color:black">Chính sách vận chuyển</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 border bg-light">
+                        <a href="/Home/Change" style="text-decoration:none;color:black">Chính sách đổi trả & bảo hành</a>
+                    </div>
+                    <div class="p-3 border bg-light">
+                        <a href="/Home/Tutorial" style="text-decoration:none;color:black">Hướng dẫn mua hàng & bảo quản</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

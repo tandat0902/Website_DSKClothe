@@ -1,0 +1,156 @@
+﻿@{
+    ViewBag.Title = "Liên hệ";
+}
+
+@*---------------
+    ------------------------------------- HEADER *@
+@Html.Partial("HeaderNavbar", "Shared")
+
+<div class="container-contact">
+    <nav class="nav">
+        @Html.ActionLink("Trang chủ", "Home", "Home", new { @class = "nav-link" })  /
+        <p class="txt-b txt-p0-5">Liên hệ</p>
+    </nav>
+    <div class="contact-title">
+        <div class="map-info">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3919.0656412726753!2d106.62918356235662!3d10.806284605098128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1671367098368!5m2!1sen!2s" width="100%" height="1242px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-info">
+            <h1>
+                THÔNG TIN LIÊN HỆ !
+            </h1>
+            <table>
+                <tr>
+                    <th>
+                        <p>
+                            Hotline: <strong>1900 633028</strong> 
+                        </p>
+                    </th>
+                    <th>
+                        <button type="button">Gọi ngay</button>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <p>
+                            Email: <strong>Customercare@DSKClothes.vn </strong> 
+                        </p>
+                    </th>
+                    <th>
+                        <button type="button">Gửi ngay</button>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <p>
+                            Chatbot:<strong> Messenger</strong> 
+                        </p>
+                    </th>
+                    <th>
+                        <button type="button">Nhắn ngay</button>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <p>
+                            Mở cửa:<a> Mon - Sun | 09:30 ~ 22:30</a>
+                        </p>
+                    </th>
+                </tr>
+
+            </table>
+
+            <div class="img-contact">
+                <div class="img-1">
+                    <img src="/Images/img-contact/325hoangsa.jpg" />
+                </div>
+                <div class="img-1-title">
+                    <h1>
+                        325 HOÀNG SA, QUẬN 1
+                    </h1>
+                    <p>
+                        325 Hoàng Sa, Phường Tân Định, Quận 1, HCM </br></br>
+                        Mở cửa: <a>Mon - Sun | 09:30 ~ 22:30</a></br></br>
+                        Phone: <a>1900 633 028</a></br></br> &nbsp;
+                    </p>
+                </div>
+            </div>
+
+            <div class="img-contact">
+                <div class="img-2">
+                    <img src="/Images/img-contact/playground.jpeg" />
+                </div>
+                <div class="img-2-title">
+                    <h1>
+                        THE NEW PLAY GROUND, QUẬN 1
+                    </h1>
+                    <p>
+                        The New Playground, 04 Phạm Ngũ Lão, Quận 1, HCM </br></br>
+                        Mở cửa: <a>Mon - Sun | 09:30 ~ 21:30</a></br></br>
+                        Phone: <a>1900 633 028</a></br></br> &nbsp;
+                    </p>
+                </div>
+            </div>
+
+            <div class="img-contact">
+                <div class="img-3">
+                    <img src="/Images/img-contact/cantho.jpg" />
+                </div>
+                <div class="img-3-title">
+                    <h1>
+                        54 MẬU THÂN, CẦN THƠ
+                    </h1>
+                    <p>
+                        54 Mậu Thân, Xuân Khánh, quận Ninh Kiều, Cần Thơ </br></br>
+                        Mở cửa: <a>Mon - Sun | 09:30 ~ 21:30</a></br></br>
+                        Phone: <a>1900 633 028</a></br></br> &nbsp;
+                    </p>
+                </div>
+            </div>
+
+
+
+
+            <div class="img-contact">
+                <div class="img-4">
+                    <img src="/Images/img-contact/suvanhanh.jpg" />
+                </div>
+                <div class="img-4-title">
+                    <h1>
+                        SƯ VẠN HẠNH, QUẬN 10
+                    </h1>
+                    <p>
+                        842 Sư Vạn Hạnh, Phường 12, Quận 10, HCM </br></br>
+                        Mở cửa: <a>Mon - Sun | 09:30 ~ 21:30</a></br></br>
+                        Phone: <a>1900 633 028</a></br></br> &nbsp;
+                    </p>
+                </div>
+            </div>
+            <div class="send-info">
+                <h2>
+                    GỬI TIN NHẮN NGAY CHO DSK CLOTHES®</br>
+                    KHI BẠN CẦN HỖ TRỢ HOẶC CÓ THẮC MẮC NHÉ!</br></br>&nbsp;
+                </h2>
+                <input type="text" placeholder="Họ và tên" />
+                <div class="input-text">
+                    <div class="input1">
+                        <input type="text" placeholder="Email" />
+                    </div>
+                    <div class="input2">
+                        <input type="text" placeholder="Số điện thoại" />
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="input3">
+                <textarea placeholder="Lời nhắn"></textarea>
+            </div>
+            <button type="button">Gửi đi</button>
+
+        </div>
+    </div>
+</div>

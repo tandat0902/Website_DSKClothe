@@ -34,7 +34,7 @@ namespace DSK_Clothes.ConnectionDatabase
                 {
                     listUser.Add(new User
                     {
-                        MaKH = (int)row["MAKH"],
+                        MaTK = (int)row["MATK"],
                         FullName = row["HOTEN"].ToString(),
                         Email = row["EMAIL"].ToString(),
                         Tel = row["SODT"].ToString(),

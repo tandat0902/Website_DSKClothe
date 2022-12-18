@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Sale";
+}
+
+@*---------------
+    ------------------------------------- HEADER *@
+@Html.Partial("HeaderNavbar", "Shared")
+
+<main class="main">
+    <div class="bc">
+        <div class="con">
+            <nav class="nav">
+                @Html.ActionLink("Trang chủ", "Home", "Home", new { @class = "nav-link" })  /
+                <p class="txt-b txt-p0-5">Sale</p>
+            </nav>
+        </div>
+    </div>
+    <section class="pd-03 pd pd__page">
+        <div class="con">
+            <div class="filter filterJS">
+                <div class="fl-wrap aln-ct">
+                    <div class="filter__btn fl-ct filterBtn">
+                        <img src="https://levents.asia/template/assets/images/svg/ic-filter.svg" alt="">
+                        <span class="txt-p0-5">Bộ lọc</span>
+                    </div>
+                    <div class="filter__select">
+                        <span>Lọc bởi</span>
+                        <select class="rs-form" name="sort-by">
+                            <option value="" disabled="" selected="">Lọc bởi</option>
+                            <option value="price-up">Giá từ thấp đến cao</option>
+                            <option value="price-down">Giá từ cao đến thấp</option>
+                            <option value="popular">Phổ biến</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pd-03 filter">
+        <div class="con">
+            <p>Not Found</p>
+        </div>
+    </section>
+</main>
+

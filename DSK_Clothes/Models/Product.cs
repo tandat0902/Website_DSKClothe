@@ -14,5 +14,7 @@ namespace DSK_Clothes.Models
         public string Hinh { get; set; }
         public string Gia { get; set; }
         public int MaLoaiSP { get; set; }
+        public int SoLuong { get; set; }
+        public string KichThuoc { get; set; }
     }
 }

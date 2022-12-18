@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Shop";
+}
+@model IEnumerable<DSK_Clothes.Models.Product>
+
+@*---------------
+    ------------------------------------- HEADER *@
+@Html.Partial("HeaderNavbar", "Shared")
+
+<main class="main">
+    <div class="bc">
+        <div class="con">
+            <nav class="nav">
+                @Html.ActionLink("Trang chủ", "Home", "Home", new { @class = "nav-link" })  /
+                <p class="txt-b txt-p0-5">Shop</p>
+            </nav>
+        </div>
+    </div>
+    <section class="pd3 pd pd__page">
+        <div class="con">
+            <div class="filter filterJS">
+                <div class="fl-wrap aln-ct">
+                    <div class="filter__btn fl-ct filterBtn">
+                        <img src="https://levents.asia/template/assets/images/svg/ic-filter.svg" alt="">
+                        <span class="txt-p0-5">Bộ lọc</span>
+                    </div>
+                    <div class="filter__select">
+                        <span>Lọc bởi</span>
+                        <select class="rs-form" name="sort-by" fdprocessedid="1t6m1a">
+                            <option value="" disabled="" selected="">Lọc bởi</option>
+                            <option value="price-up">Giá từ thấp đến cao</option>
+                            <option value="price-down">Giá từ cao đến thấp</option>
+                            <option value="popular">Phổ biến</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pd-0 abs-shop">
+        <div class="con">
+            <div class="pd__list fl-wrap">
+                @foreach (var item in Model)
+                {
+                    <div class="col-3">
+                        <div class="pd__item aos-init aos-animate" title="DSK CLOTHES® | @Html.DisplayFor(modelItem => item.TenSP)">
+                            <div class="pd__top coJS ">
+                                <div class="rto-box">
+                                    <img width="300" height="300" src="/Images/img-home/@Html.DisplayFor(modelItem => item.Hinh)" alt="Alternate Text" />
+                                </div>
+                            </div>
+                            <div class="pd__bot">
+                                @Html.ActionLink("DSK CLOTHES® | " + @Html.DisplayFor(modelItem => item.TenSP), "Details", new { id = item.MaSP }, new { @class = "pd__title" })
+                                <div class="pd__price">
+                                    <span class="big m-black">
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi>
+                                                @Html.DisplayFor(modelItem => item.Gia)
+                                                <span class="woocommerce-Price-currencySymbol">vnđ</span>
+                                            </bdi>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <a href="#" class="btn-sec hov-df pd__btn mg-ct" title="Xem thêm">XEM THÊM</a>
+    </section>
+</main>

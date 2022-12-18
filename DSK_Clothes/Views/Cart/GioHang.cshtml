@@ -1,0 +1,108 @@
+﻿@{
+    ViewBag.Title = "Giỏ hàng";
+    var i = 1;
+}
+
+@using DSK_Clothes.Models;
+@model List<GioHang>
+
+@*---------------
+    ------------------------------------- HEADER *@
+@Html.Partial("HeaderNavbar", "Shared")
+<main class="main"> 
+    <div class="bc">
+        <div class="con">
+            <nav class="nav">
+                <a href="~/Home/Home" class="nav-link">Trang chủ</a>    /
+                <p class="txt-b txt-p0-5">Giỏ hàng</p>
+            </nav>
+            <div class="d-flex justify-content-center mr-b">
+                <h2>GIỎ HÀNG CỦA BẠN</h2>
+            </div>
+
+            <div class="card border-dark">
+                <table class="table">
+                    <tr>
+                        <th><center>STT</center></th>
+                        <th><center>TÊN SẢN PHẨM</center></th>
+                        <th><center>ẢNH</center></th>
+                        <th><center>SIZE</center></th>
+                        <th><center>SỐ LƯỢNG</center></th>
+                        <th><center>ĐƠN GIÁ</center></th>
+                        <th><center>THÀNH TIỀN</center></th>
+                        <th>
+                            @*<center><a href="@Url.Action("XoaGioHang_All", "Cart")">Delete All</a></center>*@
+                        </th>
+                        <th>
+                        </th>
+                    </tr>
+                    @if(Model.Count > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td width="5%"><center>@(i++)</center></td>
+                                <td width="30%"><a href="@Url.Action("Details", "Home", new { @id = item.iMaSP })" style="text-decoration: none; color: #47474C">@item.sTenSP</a></td>
+                                <td width="10%"><img src="@Url.Content("~/Images/img-home/" + item.sAnhBia)" width="100%" /></td>
+                                <td width="5%"><center>@item.sKichThuoc</center></td>
+                                @using (Html.BeginForm("CapNhatGioHang", "Cart", new { @maSP = item.iMaSP }))
+                                {
+                                    <td width="12%">
+                                        <div class="product__describe-custom">
+                                            <!-- <button class="reduced is-form" type="button" onclick="reducedItems()">-</button> -->
+                                            <input class="product__describe-custom-reduced is-form" type="button" value="-">
+                                            <input aria-label="quantity" class="product__describe-custom-input" max="100" min="1" name="txtSoLuong" type="number" value="@item.iSoLuong">
+                                            <input class="product__describe-custom-increase is-form" type="button" value="+">
+                                            <!-- <button class="increase is-form" type="button" onclick="reducedItems()">+</button> -->
+                                        </div>
+                                    </td>
+                                    <td width="12%"><center>@String.Format("{0:0,0}", item.dDonGia)</center></td>
+                                    <td width="12%"><center>@String.Format("{0:0,0}", item.dThanhTien)</center></td>
+                                    <td width="7%">
+                                        <input type="submit" value="Update" style="background: #4cff00; color: #fff; padding: 5px; border: none; border-radius: 7px; width: 5rem;" />
+                                    </td>
+                                    <td width="7%">
+                                        <center>
+                                            <a href="@Url.Action("XoaGioHang", "Cart", new { @maSP = item.iMaSP })" style="text-decoration: none; color: #47474c">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                </svg>
+                                            </a>
+                                            
+                                        </center>
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="8"><center><b>@ViewBag.EmptyCart</b></center></td>
+                        </tr>
+                    }
+
+                    <tr>
+                        <td colspan="2" style="color:blue; font-weight:bold; text-align:right;">Tổng cộng:</td>
+                        <td style="color:blue; font-weight:bold;">@ViewBag.TongSoLuong</td>
+                        <td></td>
+                        <td></td>
+                        <td style="color:red; font-weight:bold;">@String.Format("{0:0,0}", ViewBag.TongThanhTien) VND</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="btn-crt mr-t2r">
+                <div class="btn-lf" title="Thanh toán">
+                    <div class="box-2">
+                        <div class="btn-cl btn-one">
+                            <span>Thanh toán</span>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</main>

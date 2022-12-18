@@ -20,7 +20,40 @@
     </div>
     <div class="hd__top">
         <div class="con fl-ct">
-            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="hiden-nav">
+                    <div class="fl-wrap">
+                        <nav role="navigation">
+                            <div id="menuToggle">
+                                <input type="checkbox" />
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <ul id="menu">
+                                    <li>@Html.ActionLink("Về chúng tôi", "AboutUs", "Home")</li>
+                                    <li>@Html.ActionLink("Shop", "Shop", "Home")</li>
+                                    <li>@Html.ActionLink("Sale-off", "SaleOff", "Home")</li>
+                                    <li>@Html.ActionLink("Bộ sưu tập", "Collection", "Home")</li>
+                                    <li>@Html.ActionLink("Outfits", "Outfits", "Home")</li>
+                                    <li>@Html.ActionLink("Blog", "Blog", "Home")</li>
+                                    <li>@Html.ActionLink("Liên hệ", "Contact", "Home")</li>
+                                    <li>@Html.ActionLink("Chăm sóc khách hàng", "Care", "Home")</li>
+                                    <li>@Html.ActionLink("Tuyển dụng", "Recruit", "Home")</li> 
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="hd__list fl-con aln-ct">
+                            <div class="hd__ser pd-lr hd__des hv-ani">
+                                <div class="ser__btn actBtn" title="Tìm kiếm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-4">
                 <div class="hd__logo">
                     <a href="~/Home/Home"><img src="/Images/logo.gif" alt="DSK Clothes" title="DSK Clothes" /></a>
@@ -49,14 +82,7 @@
                         </div>
                     </div>
                     <div class="hd__cart pd-lr hv-ani">
-                        <div class="cart__btn cartBtn" title="Giỏ hàng">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
-                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                            </svg>
-                            <div class="cart__num c-whi f-thin" title="Giỏ hàng">
-                                0
-                            </div>
-                        </div>
+                        @Html.Action("GioHangPartial", "Cart")
                     </div>
                     <div class="hd__user pd-lr">
                         <a href="~/SignUp/LogIn" class="user__btn actBtn" title="Đăng nhập">
@@ -87,7 +113,11 @@
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307" id="menu-item-307"> 
                             @Html.ActionLink("Shop", "Shop", "Home")
-                            <span><i class="fas fa-angle-down"></i></span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </span>
                             <ul class="submenu">
                                 <li class="submenu__item">
                                     <a href="#">Tất cả</a>
@@ -135,7 +165,7 @@
                             @Html.ActionLink("Liên hệ", "Contact", "Home")
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-172" id="menu-item-172">
-                            @Html.ActionLink("Chăm sóc khách hàng", "Care", "Home")
+                            @Html.ActionLink("Chăm sóc khách hàng", "CustomerCare", "Home")
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-639205" id="menu-item-639205">
                             @Html.ActionLink("Tuyển dụng", "Recruit", "Home")
