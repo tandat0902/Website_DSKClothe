@@ -264,6 +264,39 @@ body{
     transform: scale(1.1);
 }
 
+.search-con{
+    width: 100%;
+    height: 40%;
+    background: #fff;
+    z-index: 999999;
+    transition: all.5s ease-in-out; 
+}
+
+#close-btn{
+    margin-left: 95%;
+    margin-top: 1.5rem;
+}
+
+.abs-search{
+    width: 100%;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.abs-search input{
+    border: 1px solid #47474C;
+    outline: none;
+    padding: .69rem 1rem;
+    width: 80%;
+}
+
+.btn-search {
+    width: 13rem;
+    padding: 9px;
+    text-decoration: none;
+    color: #7f7f7f;
+}
+
 .cart__num{
     color: white;
     font-size: 10px;
@@ -883,6 +916,13 @@ body{
 
 /*-------------------------------------------------------- STYLE DETAILS --------------------------------------------------------*/
 .bc{
+    margin-top: 19rem;
+    margin-bottom:2rem;
+    font-size: 13.5px;
+    /*padding: 0 2.5rem;*/
+}
+
+.bc-p{
     margin-top: 19rem;
     margin-bottom:2rem;
     font-size: 13px;
@@ -1869,7 +1909,6 @@ figure {
     margin-bottom:2rem;
 }
 .container-cus nav{
-    margin-left:2.5rem;
     margin-bottom:2rem;
 }
 .title-cus span{
@@ -1883,8 +1922,11 @@ figure {
     margin-top:3rem;
 }
 /*-------------------------------------------------------- STYLE RECRUIT --------------------------------------------------------*/
+.container-re nav{
+    margin-top: 3rem;
+}
 .banner-f{
-    margin-top:16.7rem;
+    margin-top:7rem;
     position: relative;
     overflow: hidden;
 }
@@ -1911,10 +1953,8 @@ figure {
     transform: scale(1.1)
 }
 
-
 .main nav{
-    margin-left:10px;
-    margin-top:1rem;
+    margin-top:21rem;
 }
 .recruit {
     padding: 0 1rem;
@@ -1979,6 +2019,85 @@ figure {
     color: whitesmoke;
     background-color: black;
 }
+
+.pd85{
+    padding: 0 3rem;
+    margin-bottom: 85rem;
+}
+
+/*-------------------------------------------------------- STYLE OUTFITS --------------------------------------------------------*/
+.nav-ver{
+    width: 15%;
+}
+
+.nav-ver-con{
+    width: 100%;
+    padding: 0 1rem 4rem 1rem;
+}
+
+.nav-ver_link a{
+    text-decoration: none;
+    color: #47474C;
+}
+
+.w-out{
+    width: 85%;
+}
+
+.sty__img-out{
+    width: 100%;
+}
+
+.sty__img-out img{
+    width: 100%;
+}
+
+/*-------------------------------------------------------- STYLE COLLECTION --------------------------------------------------------*/
+.container-collect{
+    width: 100%;
+    margin-top:13rem;
+}
+.container-collect nav{
+    margin-bottom:2rem;
+}
+
+.container-collect img{
+    margin-top:3rem;
+    width: 100%;
+    padding:30px 10px 30px 10px;
+    margin-bottom:5rem;
+}
+.img-collec1{
+    position:relative;
+}
+.btn-collec1{
+    position:absolute;
+    margin:-10rem 41.4%;
+}
+.btn-collec1 button{
+    color: black;
+    background-color: #FFFFFF;
+    width:280px;
+    height:35px;
+    font-weight:bold;
+    border:1pt solid;
+    border: none;
+}
+.btn-collec1 button:hover{
+    color: whitesmoke;
+    background-color: black;
+}
+
+.collect-title{
+    text-align: center;
+}
+
+.collect-title span{
+    font-size:18px;
+    font-weight:bold; 
+}
+
+
 /*-------------------------------------------------------- RESPONSIVE HOME --------------------------------------------------------*/
 /*-------- TABLET: width >= 740px and width < 1024px ---------*/
 @media only screen and (min-width: 46.25em) and (max-width: 66.25em){

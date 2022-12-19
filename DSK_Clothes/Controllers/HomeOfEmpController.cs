@@ -133,5 +133,11 @@ namespace DSK_Clothes.Controllers
             }
             return View(listProduct);
         }
+
+        public ActionResult Search(string txtSearch)
+        {
+            var listProducts = cnp.search(txtSearch);
+            return View(listProducts);
+        }
     }
 }

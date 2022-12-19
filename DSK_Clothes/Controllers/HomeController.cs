@@ -40,8 +40,6 @@ namespace DSK_Clothes.Controllers
         [HttpPost]
         public ActionResult Details(int id, Product p, FormCollection f)
         {
-            //if (p.KichThuoc != null)
-            //{
             Session["ms"] = id;
             Session["strURL"] = Request.Url.ToString();
             Session["size"] = p.KichThuoc;
@@ -50,6 +48,12 @@ namespace DSK_Clothes.Controllers
             var size = Session["size"];
             var sl = int.Parse(f["txtSoLuong"].ToString());
             return RedirectToAction("ThemGioHang", "Cart", new { ms = ms, strURL = strURL, size = size, sl = sl });
+        }
+
+        public ActionResult Search(string txtSearch)
+        {
+            var listProducts = cnp.search(txtSearch);
+            return View(listProducts);
         }
 
         public ActionResult AboutUs()
@@ -68,6 +72,16 @@ namespace DSK_Clothes.Controllers
         }
 
         public ActionResult SaleOff()
+        {
+            return View();
+        }
+
+        public ActionResult Collection()
+        {
+            return View();
+        }
+
+        public ActionResult Outfits()
         {
             return View();
         }

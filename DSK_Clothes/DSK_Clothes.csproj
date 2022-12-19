@@ -203,6 +203,11 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\img-collection\collec1.jpg" />
+    <Content Include="Images\img-collection\collec2.jpg" />
+    <Content Include="Images\img-collection\collec3.jpg" />
+    <Content Include="Images\img-collection\collec4.jpeg" />
+    <Content Include="Images\img-collection\collec5.jpg" />
     <Content Include="Images\img-contact\325hoangsa.jpg" />
     <Content Include="Images\img-contact\cantho.jpg" />
     <Content Include="Images\img-contact\playground.jpeg" />
@@ -332,6 +337,10 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\CustomerCare.cshtml" />
     <Content Include="Views\Home\Recruit.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Home\Collection.cshtml" />
+    <Content Include="Views\Home\Outfits.cshtml" />
+    <Content Include="Views\HomeOfEmp\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

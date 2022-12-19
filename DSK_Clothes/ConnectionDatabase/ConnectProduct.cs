@@ -191,5 +191,38 @@ namespace DSK_Clothes.ConnectionDatabase
                 return false;
             }
         }
+
+        //------------------------------------------------- TÌM KIẾM SẢN PHẨM
+        public List<Product> search(string txtSearch)
+        {
+            List<Product> listProducts = new List<Product>();
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM SANPHAM WHERE TENSP LIKE N'%" + txtSearch + "%' ORDER BY GIA ASC";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+
+                con.Open();
+                da.Fill(dt);
+                con.Close();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    listProducts.Add(new Product
+                    {
+                        MaSP = (int)row["MASP"],
+                        TenSP = row["TENSP"].ToString(),
+                        NuocSX = row["NUOCSX"].ToString(),
+                        ChatLieu = row["CHATLIEU"].ToString(),
+                        Gia = row["GIA"].ToString(),
+                        Hinh = row["HINH"].ToString(),
+                        MaLoaiSP = (int)row["MALOAISP"]
+                    });
+                }
+                return listProducts;
+            }
+        }
     }
 }

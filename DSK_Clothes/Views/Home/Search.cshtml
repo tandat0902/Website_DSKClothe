@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Tìm kiếm";
+}
+@model IEnumerable<DSK_Clothes.Models.Product>
+
+@*---------------
+    ------------------------------------- HEADER *@
+@Html.Partial("HeaderNavbar", "Shared")
+
+<main class="main">
+    <div class="bc">
+        <div class="con">
+            <nav class="nav">
+                @Html.ActionLink("Trang chủ", "Home", "Home", new { @class = "nav-link" })  /
+                <p class="txt-b txt-p0-5">Tìm kiếm</p>
+            </nav>
+        </div>
+    </div>
+    <section class="pd3 pd pd__page">
+        <div class="con">
+            <div class="search-con">      
+                <form class="fl-wrap abs-search" role="search" action="/Home/Search">
+                    <input class="ip-search" type="search" placeholder="Tìm kiếm theo tên..." id="txtSearch" name="txtSearch" aria-label="Search">
+                    <button class="btn-sty hov-df btn-search" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="pd-0 abs-shop w100">
+        <div class="con">
+            <div class="pd__list fl-wrap">
+                @if (Model.Count() != 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        <div class="col-3">
+                            <div class="pd__item aos-init aos-animate" title="DSK CLOTHES® | @Html.DisplayFor(modelItem => item.TenSP)">
+                                <div class="pd__top coJS ">
+                                    <div class="rto-box">
+                                        <img width="80%" height="300" src="/Images/img-home/@Html.DisplayFor(modelItem => item.Hinh)" alt="Alternate Text" />
+                                    </div>
+                                </div>
+                                <div class="pd__bot">
+                                    @Html.ActionLink("DSK CLOTHES® | " + @Html.DisplayFor(modelItem => item.TenSP), "Details", new { id = item.MaSP }, new { @class = "pd__title" })
+                                    <div class="pd__price">
+                                        <span class="big m-black">
+                                            <span class="woocommerce-Price-amount amount">
+                                                <bdi>
+                                                    @String.Format("{0:0.0}", item.Gia)
+                                                    <span class="woocommerce-Price-currencySymbol">vnđ</span>
+                                                </bdi>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else 
+                {
+                    <div class="w100 mg-t3">
+                        <center><h5>Không tồn tại sản phẩm bạn cần tìm!</h5> </center>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>
+
