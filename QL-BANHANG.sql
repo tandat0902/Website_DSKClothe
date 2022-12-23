@@ -4,69 +4,76 @@ GO
 USE QL_BANHANG
 GO
 
--- KHACHANG
-CREATE TABLE TAIKHOAN
-(
-	MATK	INT NOT NULL IDENTITY(1, 1),
-	MATKHAU	VARCHAR(20),
-	MAQUYEN INT,	
-	HOTEN	NVARCHAR(30),
-	EMAIL	VARCHAR(30),
-	SODT	VARCHAR(10),
-	NGAYSINH DATE,
-	CONSTRAINT PK_KHACHHANG PRIMARY KEY(MATK)
-);
+	-- KHACHANG
+	CREATE TABLE TAIKHOAN
+	(
+		MATK	INT NOT NULL IDENTITY(1, 1),
+		MATKHAU	VARCHAR(20),
+		MAQUYEN INT,	
+		HOTEN	NVARCHAR(30),
+		EMAIL	VARCHAR(30),
+		SODT	VARCHAR(10),
+		NGAYSINH DATE,
+		CONSTRAINT PK_KHACHHANG PRIMARY KEY(MATK)
+	);
 
----------------------------------------------
--- QUYỀN TRUY CẬP
-CREATE TABLE QUYENTRUYCAP
-(
-	MAQUYEN	INT NOT NULL IDENTITY(1, 1),	
-	TENQUYEN	NVARCHAR(40),
-	CONSTRAINT PK_QUYENTRUYCAP PRIMARY KEY(MAQUYEN)
-);
----------------------------------------------
--- SANPHAM
-CREATE TABLE SANPHAM
-(
-	MASP INT NOT NULL IDENTITY(1, 1),
-	TENSP NVARCHAR(60),
-	NUOCSX	NVARCHAR(40),
-	CHATLIEU NVARCHAR(30),
-	HINH VARCHAR(100),
-	GIA DECIMAL(18, 0),
-	MALOAISP INT,
-	CONSTRAINT PK_SANPHAM PRIMARY KEY(MASP)
-);
+	---------------------------------------------
+
+	-- QUYỀN TRUY CẬP
+	CREATE TABLE QUYENTRUYCAP
+	(
+		MAQUYEN	INT NOT NULL IDENTITY(1, 1),	
+		TENQUYEN	NVARCHAR(40),
+		CONSTRAINT PK_QUYENTRUYCAP PRIMARY KEY(MAQUYEN)
+	);
+	---------------------------------------------
+
+	-- SANPHAM
+	CREATE TABLE SANPHAM
+	(
+		MASP INT NOT NULL IDENTITY(1, 1),
+		TENSP NVARCHAR(60),
+		NUOCSX	NVARCHAR(40),
+		CHATLIEU NVARCHAR(30),
+		HINH VARCHAR(100),
+		GIA DECIMAL(18, 0),
+		MALOAISP INT,
+		CONSTRAINT PK_SANPHAM PRIMARY KEY(MASP)
+	);
 	
----------------------------------------------
--- LOAISANPHAM
-CREATE TABLE LOAISANPHAM
-(
-	MALOAISP INT NOT NULL IDENTITY(1, 1),
-	TENLOAISP NVARCHAR(60),
-	CONSTRAINT PK_LOAISANPHAM PRIMARY KEY(MALOAISP)
-);
+	---------------------------------------------
 
----------------------------------------------
--- HOADON
-CREATE TABLE HOADON
-(
-	SOHD INT NOT NULL IDENTITY(1, 1),
-	NGHD DATE,
-	MATK INT,
-	TRIGIA DECIMAL(18, 0),
-	CONSTRAINT PK_HOADON PRIMARY KEY(SOHD)
-);
----------------------------------------------
--- CTHD
-   CREATE TABLE CTHD
-(
-	SOHD INT NOT NULL,
-	MASP INT NOT NULL,
-	SL INT,
-	CONSTRAINT PK_CTHD PRIMARY KEY(SOHD,MASP)
-);
+
+	-- LOAISANPHAM
+	CREATE TABLE LOAISANPHAM
+	(
+		MALOAISP INT NOT NULL IDENTITY(1, 1),
+		TENLOAISP NVARCHAR(60),
+		CONSTRAINT PK_LOAISANPHAM PRIMARY KEY(MALOAISP)
+	);
+
+	---------------------------------------------
+
+	-- HOADON
+	CREATE TABLE HOADON
+	(
+		SOHD INT NOT NULL IDENTITY(1, 1),
+		NGHD DATE,
+		MATK INT,
+		TRIGIA DECIMAL(18, 0),
+		CONSTRAINT PK_HOADON PRIMARY KEY(SOHD)
+	);
+
+	---------------------------------------------
+
+	-- CTHD
+	   CREATE TABLE CTHD
+	(
+		SOHD INT NOT NULL,
+		MASP INT NOT NULL,
+		SL INT,
+		CONSTRAINT PK_CTHD PRIMARY KEY(SOHD,MASP)
+	);
 ---------------------------------------------
 -- Khoa ngoai cho bang TAIKHOAN
 ALTER TABLE TAIKHOAN 
@@ -105,19 +112,19 @@ VALUES
 -------------------------------
 -- TAIKHOAN
 SET DATEFORMAT DMY
-INSERT INTO TAIKHOAN(HOTEN, EMAIL, SODT, NGAYSINH, MATKHAU)
+INSERT INTO TAIKHOAN(HOTEN, EMAIL, SODT, NGAYSINH, MATKHAU, MAQUYEN)
 VALUES
-(N'Phạm Trần Tấn Đạt','tandat.pham292@gmail.com','0862616215','22/09/2002','123456'),
-(N'Nguyễn Văn A', 'anguyen123@gmail.com','0123456789','22/10/1960','123456'),
-(N'Trần Ngọc Hân', 'hantran123@gmail.com','0122456389','03/04/1974','123456'),
-(N'Trần Ngọc Linh','linhtran123@gmail.com','0121736789','12/06/1980','123456'),
-(N'Trần Minh Long','longtran123@gmail.com','0116367890','09/03/1965','123456'),
-(N'Lê Nhật Minh','minhle123@gmail.com','0323284789','10/03/1950','123456'),
-(N'Lê Hoài Thương','thuongle123@gmail.com','0483428589','31/12/1981','123456'),
-(N'Nguyễn Văn Tám','tamnguyen123@gmail.com','0125438739','06/04/1971','123456'),
-(N'Phan Thị Thanh','thanhphan123@gmail.com','0323456789','10/01/1971','123456'),
-(N'Lê Hà Vinh','vinhle123@gmail.com','0123437789','03/09/1979','123456'),
-(N'Hà Duy Lập','lapha123@gmail.com','0127476789','02/05/1983','123456');
+(N'Phạm Trần Tấn Đạt','tandat.pham292@gmail.com','0862616215','22/09/2002','123456', 2),
+(N'Nguyễn Văn A', 'anguyen123@gmail.com','0123456789','22/10/1960','123456', 1),
+(N'Trần Ngọc Hân', 'hantran123@gmail.com','0122456389','03/04/1974','123456', 1),
+(N'Trần Ngọc Linh','linhtran123@gmail.com','0121736789','12/06/1980','123456', 1),
+(N'Trần Minh Long','longtran123@gmail.com','0116367890','09/03/1965','123456', 1),
+(N'Lê Nhật Minh','minhle123@gmail.com','0323284789','10/03/1950','123456', 1),
+(N'Lê Hoài Thương','thuongle123@gmail.com','0483428589','31/12/1981','123456', 1),
+(N'Nguyễn Văn Tám','tamnguyen123@gmail.com','0125438739','06/04/1971','123456', 1),
+(N'Phan Thị Thanh','thanhphan123@gmail.com','0323456789','10/01/1971','123456', 1),
+(N'Lê Hà Vinh','vinhle123@gmail.com','0123437789','03/09/1979','123456', 1),
+(N'Hà Duy Lập','lapha123@gmail.com','0127476789','02/05/1983','123456', 1);
 
 -------------------------------
 -- LOAISANPHAM
